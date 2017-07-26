@@ -1,4 +1,4 @@
-#_Tools or Scripts of Performance Testing_
+# #_Tools or Scripts of Performance Testing_
 
 ## Performance Testing
 
@@ -15,27 +15,27 @@ _Configure the SSH passwordless_
 _**Remote enable docker service on all nodes**_
 
    1. Create the docker repo and dependency package repo
-		
-		cat << EOF >> /etc/yum.repos.d/docker.repo
-		
-		[dockerrepo]
-		name=Docker Repository
-		baseurl=http://ftp.unicamp.br/pub/ppc64el/rhel/7_1/docker-ppc64el/
-		proxy=http://9.21.53.14:3128
-		enabled=1
-		gpgcheck=0
-		#gpgkey=https://yum.dockerproject.org/gpg
-		
-		EOF
-		
-		cat << EOF >> /etc/yum.repos.d/platformlab.repo
 			
-		[rhel-server-7.2-x86_64]
-		name=Red Hat Enterprise Linux $releasever - $basearch
-		gpgcheck=0
-		enabled=1
-		proxy=http://9.21.53.14:3128
-		baseurl=http://yum.platformlab.ibm.com/deploy/yum/redhat/releases/rhel-server-7.2-ppc64le/		
+			cat << EOF >> /etc/yum.repos.d/docker.repo
+			
+			[dockerrepo]
+			name=Docker Repository
+			baseurl=http://ftp.unicamp.br/pub/ppc64el/rhel/7_1/docker-ppc64el/
+			proxy=http://9.21.53.14:3128
+			enabled=1
+			gpgcheck=0
+			#gpgkey=https://yum.dockerproject.org/gpg
+			
+			EOF
+			
+			cat << EOF >> /etc/yum.repos.d/platformlab.repo
+				
+			[rhel-server-7.2-x86_64]
+			name=Red Hat Enterprise Linux $releasever - $basearch
+			gpgcheck=0
+			enabled=1
+			proxy=http://9.21.53.14:3128
+			baseurl=http://yum.platformlab.ibm.com/deploy/yum/redhat/releases/rhel-server-7.2-ppc64le/		
 		
 		EOF
 
