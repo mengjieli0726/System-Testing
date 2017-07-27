@@ -37,7 +37,7 @@ _**Remote enable docker service on all nodes**_
 			proxy=http://9.21.53.14:3128
 			baseurl=http://yum.platformlab.ibm.com/deploy/yum/redhat/releases/rhel-server-7.2-ppc64le/		
 		
-		EOF
+			EOF
 
 		
   2. Remote install docker engine and start docker service, check docker version.
