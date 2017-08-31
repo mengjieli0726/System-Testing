@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: default-nginx-ng
+  namespace: default
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: default-nginx-ng
+  template:
+    metadata:
+      labels:
+        app: default-nginx-ng
+    spec:
+      containers:
+      - name: nginx
+        image: private.reg2:5000/nginx:1.8.1
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        imagePullPolicy: IfNotPresent

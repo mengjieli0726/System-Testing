@@ -1,0 +1,9 @@
+[root@ib17b05 service]# kubectl create -f nginx.yaml
+ingress "icbcnginx" created
+service "icbc-nginx" created
+deployment "icbc-nginx" created
+
+
+
+
+[root@ib17b05 service]# w=`date +%s.%4N`; kubectl scale --replicas=200 deployment/icbc-nginx ; while true; do b=`kubectl describe  ep icbc-nginx |grep Addresses|grep -v NotReadyAddresses | awk -F ":" '{print $2}'|awk '{print $1}' |tr -s ',' '\n' |wc -l`; if   [[ "$b" -eq 200   ]] ; then x=`date +%s.%4N` ;break; fi; done; echo $w; echo $x; echo $x-$w|bc

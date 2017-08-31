@@ -1,0 +1,133 @@
+100
+
+Create
+1496218843.2954
+1496218873.1177
+
+GUI deployment: 0.104
+kubectl deployment: 0.090
+
+delete 
+1496218891.1100
+1496219213.2087
+
+200 
+create
+
+1496219276.2123
+1496219331.1848
+
+GUI deployment: 0.112
+kubectl deployment: 0.100
+
+delete
+1496219503.2056
+1496220136.7270
+
+300
+create
+1496220209.0306
+1496220364.6560
+
+GUI deployment: 0.138
+Kubectl deployment: 0.110
+
+delete
+1496220409.4093
+1496221378.0031
+
+400
+
+create
+1496221420.1976
+1496221522.4327
+
+GUI deployment: 0.144
+kubectl deployment: 0.119
+
+delete
+1496221571.4115
+1496222847.7182
+
+500
+create
+1496223000.1022
+1496223127.5518
+
+GUI deployment: 0.158
+kubectl deployment: 0.133
+
+delete
+1496223143.2301
+1496224765.2065
+
+600 
+Create
+
+1496283975.8226
+1496284127.2397
+
+delete
+1496284730.1826
+1496286669.9319
+
+Get deployments GUI API : 0.185
+kubelet deployements: 0.180
+
+
+700
+create
+
+1496298371.8459
+1496298545.1646
+
+
+GUI deployment: 0.189
+kubectl deployment: 0.171
+
+
+delete
+1496301409.6225
+1496303697.6798
+
+800
+
+create
+1496368671.8515
+1496368866.4905
+
+GUI deployment: 0.284
+Kubectl deployment: 0.173
+
+delete
+1496370414.9063
+1496372973.7183
+
+900
+
+create
+1496373494.2606
+1496373712.3689
+
+
+GUI deployment: 0.205
+kubectl deployment: 0.198
+
+delete
+1496373785.0011
+1496376671.4269
+
+
+1000
+
+create
+1496376806.5181
+1496377061.9698
+
+GUI Deployment: 0.243
+kubectl deployment: 0.209
+
+delete
+
+1496377165.1292
+1496380377.2270

@@ -1,0 +1,6 @@
+[rhel-server-7.2-x86_64]
+name=Red Hat Enterprise Linux $releasever - $basearch
+gpgcheck=0
+enabled=1
+proxy=http://9.21.53.14:3128
+baseurl=http://yum.platformlab.ibm.com/deploy/yum/redhat/releases/rhel-server-7.2-ppc64le/

@@ -1,0 +1,7 @@
+[dockerrepo]
+name=Docker Repository
+baseurl=http://ftp.unicamp.br/pub/ppc64el/rhel/7_1/docker-ppc64el/
+proxy=http://9.21.53.14:3128
+enabled=1
+gpgcheck=0
+#gpgkey=https://yum.dockerproject.org/gpg

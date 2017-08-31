@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: default-nginx-ppc64le-ng1
+  namespace: default
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+spec:
+  replicas: 50
+  selector:
+    matchLabels:
+      app: default-nginx-ppc64le-ng1
+  template:
+    metadata:
+      labels:
+        app: default-nginx-ppc64le-ng1
+    spec:
+      containers:
+      - name: nginx-ppc64le
+        image: private.reg:5000/redos/nginx-ppc64le:latest
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        imagePullPolicy: IfNotPresent

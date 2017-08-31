@@ -1,0 +1,2046 @@
+[root@ib17b05 ~]# docker run -e LICENSE=accept -e ANSIBLE_CALLBACK_WHITELIST=profile_tasks,timer  --net=host --name=installer --rm -t -v "$(pwd)/cluster":/installer/cluster private.reg:5000/daily/cfc-installer:20170522 uninstall
+
+PLAY [Uninstalling cluster nodes] ************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+Monday 05 June 2017  03:08:40 +0000 (0:00:00.039)       0:00:00.039 ***********
+ok: [172.29.216.4]
+ok: [172.29.216.1]
+ok: [172.29.216.2]
+ok: [172.29.216.3]
+ok: [172.29.216.5]
+ok: [172.29.216.7]
+ok: [172.29.216.6]
+ok: [172.29.216.9]
+ok: [172.29.216.8]
+ok: [172.29.216.10]
+ok: [172.29.216.12]
+ok: [172.29.216.11]
+ok: [172.29.216.13]
+ok: [172.29.216.14]
+ok: [172.29.216.15]
+ok: [172.29.216.17]
+ok: [172.29.216.16]
+ok: [172.29.216.18]
+ok: [172.29.216.19]
+ok: [172.29.216.20]
+ok: [172.29.216.22]
+ok: [172.29.216.21]
+ok: [172.29.216.24]
+ok: [172.29.216.23]
+ok: [172.29.216.25]
+ok: [172.29.216.28]
+ok: [172.29.216.27]
+ok: [172.29.216.26]
+ok: [172.29.216.30]
+ok: [172.29.216.29]
+ok: [172.29.216.32]
+ok: [172.29.216.31]
+ok: [172.29.216.34]
+ok: [172.29.216.33]
+ok: [172.29.216.35]
+ok: [172.29.216.37]
+ok: [172.29.216.36]
+ok: [172.29.216.38]
+ok: [172.29.216.39]
+ok: [172.29.216.40]
+ok: [172.29.216.41]
+ok: [172.29.216.42]
+ok: [172.29.216.43]
+ok: [172.29.216.44]
+ok: [172.29.216.45]
+ok: [172.29.216.46]
+ok: [172.29.216.47]
+ok: [172.29.216.48]
+ok: [172.29.216.49]
+ok: [172.29.216.50]
+ok: [172.29.216.51]
+ok: [172.29.216.53]
+ok: [172.29.216.52]
+ok: [172.29.216.54]
+ok: [172.29.216.55]
+ok: [172.29.216.56]
+ok: [172.29.216.57]
+ok: [172.29.216.58]
+ok: [172.29.216.59]
+ok: [172.29.216.60]
+ok: [9.21.53.15]
+
+TASK [Removing lock file] ********************************************************************************************************************************************************************************
+Monday 05 June 2017  03:08:54 +0000 (0:00:14.376)       0:00:14.416 ***********
+changed: [172.29.216.4]
+changed: [172.29.216.1]
+changed: [172.29.216.3]
+changed: [172.29.216.2]
+changed: [172.29.216.5]
+changed: [172.29.216.6]
+changed: [172.29.216.9]
+changed: [172.29.216.7]
+changed: [172.29.216.8]
+changed: [172.29.216.10]
+changed: [172.29.216.11]
+changed: [172.29.216.13]
+changed: [172.29.216.12]
+changed: [172.29.216.14]
+changed: [172.29.216.15]
+changed: [172.29.216.16]
+changed: [172.29.216.18]
+changed: [172.29.216.17]
+changed: [172.29.216.19]
+changed: [172.29.216.20]
+changed: [172.29.216.21]
+changed: [172.29.216.23]
+changed: [172.29.216.22]
+changed: [172.29.216.24]
+changed: [172.29.216.25]
+changed: [172.29.216.27]
+changed: [172.29.216.28]
+changed: [172.29.216.26]
+changed: [172.29.216.29]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.32]
+changed: [172.29.216.33]
+changed: [172.29.216.34]
+changed: [172.29.216.35]
+changed: [172.29.216.37]
+changed: [172.29.216.38]
+changed: [172.29.216.40]
+changed: [172.29.216.39]
+changed: [172.29.216.36]
+changed: [172.29.216.42]
+changed: [172.29.216.41]
+changed: [172.29.216.43]
+changed: [172.29.216.44]
+changed: [172.29.216.45]
+changed: [172.29.216.46]
+changed: [172.29.216.47]
+changed: [172.29.216.49]
+changed: [172.29.216.48]
+changed: [172.29.216.50]
+changed: [172.29.216.51]
+changed: [172.29.216.52]
+changed: [172.29.216.53]
+changed: [172.29.216.54]
+changed: [172.29.216.55]
+changed: [172.29.216.56]
+changed: [172.29.216.57]
+changed: [172.29.216.58]
+changed: [172.29.216.59]
+changed: [172.29.216.60]
+changed: [9.21.53.15]
+
+TASK [Getting master nodes] ******************************************************************************************************************************************************************************
+Monday 05 June 2017  03:09:06 +0000 (0:00:11.247)       0:00:25.663 ***********
+ok: [172.29.216.1]
+ok: [172.29.216.3]
+ok: [172.29.216.4]
+ok: [172.29.216.5]
+ok: [172.29.216.6]
+ok: [172.29.216.7]
+ok: [172.29.216.8]
+ok: [172.29.216.9]
+ok: [172.29.216.10]
+ok: [172.29.216.11]
+ok: [172.29.216.12]
+ok: [172.29.216.13]
+ok: [172.29.216.14]
+ok: [172.29.216.15]
+ok: [172.29.216.16]
+ok: [172.29.216.17]
+ok: [172.29.216.18]
+ok: [172.29.216.19]
+ok: [172.29.216.20]
+ok: [172.29.216.21]
+ok: [172.29.216.22]
+ok: [172.29.216.23]
+ok: [172.29.216.24]
+ok: [172.29.216.25]
+ok: [172.29.216.26]
+ok: [172.29.216.27]
+ok: [172.29.216.28]
+ok: [172.29.216.29]
+ok: [172.29.216.30]
+ok: [172.29.216.31]
+ok: [172.29.216.32]
+ok: [172.29.216.33]
+ok: [172.29.216.34]
+ok: [172.29.216.35]
+ok: [172.29.216.36]
+ok: [172.29.216.37]
+ok: [172.29.216.38]
+ok: [172.29.216.39]
+ok: [172.29.216.40]
+ok: [172.29.216.41]
+ok: [172.29.216.42]
+ok: [172.29.216.43]
+ok: [172.29.216.44]
+ok: [172.29.216.45]
+ok: [172.29.216.46]
+ok: [172.29.216.47]
+ok: [172.29.216.48]
+ok: [172.29.216.49]
+ok: [172.29.216.50]
+ok: [172.29.216.51]
+ok: [172.29.216.52]
+ok: [172.29.216.53]
+ok: [172.29.216.54]
+ok: [172.29.216.55]
+ok: [172.29.216.56]
+ok: [172.29.216.57]
+ok: [172.29.216.58]
+ok: [172.29.216.2]
+ok: [172.29.216.59]
+ok: [172.29.216.60]
+ok: [9.21.53.15]
+
+TASK [Getting proxy nodes] *******************************************************************************************************************************************************************************
+Monday 05 June 2017  03:09:06 +0000 (0:00:00.386)       0:00:26.049 ***********
+ok: [172.29.216.2]
+ok: [172.29.216.3]
+ok: [172.29.216.4]
+ok: [172.29.216.5]
+ok: [172.29.216.6]
+ok: [172.29.216.7]
+ok: [172.29.216.8]
+ok: [172.29.216.9]
+ok: [172.29.216.10]
+ok: [172.29.216.11]
+ok: [172.29.216.12]
+ok: [172.29.216.13]
+ok: [172.29.216.14]
+ok: [172.29.216.15]
+ok: [172.29.216.16]
+ok: [172.29.216.18]
+ok: [172.29.216.17]
+ok: [172.29.216.19]
+ok: [172.29.216.20]
+ok: [172.29.216.21]
+ok: [172.29.216.22]
+ok: [172.29.216.23]
+ok: [172.29.216.24]
+ok: [172.29.216.25]
+ok: [172.29.216.26]
+ok: [172.29.216.27]
+ok: [172.29.216.28]
+ok: [172.29.216.29]
+ok: [172.29.216.30]
+ok: [172.29.216.31]
+ok: [172.29.216.32]
+ok: [172.29.216.33]
+ok: [172.29.216.35]
+ok: [172.29.216.34]
+ok: [172.29.216.36]
+ok: [172.29.216.37]
+ok: [172.29.216.38]
+ok: [172.29.216.39]
+ok: [172.29.216.1]
+ok: [172.29.216.40]
+ok: [172.29.216.42]
+ok: [172.29.216.44]
+ok: [172.29.216.43]
+ok: [172.29.216.45]
+ok: [172.29.216.46]
+ok: [172.29.216.47]
+ok: [172.29.216.48]
+ok: [172.29.216.49]
+ok: [172.29.216.50]
+ok: [172.29.216.51]
+ok: [172.29.216.52]
+ok: [172.29.216.54]
+ok: [172.29.216.53]
+ok: [172.29.216.55]
+ok: [172.29.216.56]
+ok: [172.29.216.57]
+ok: [172.29.216.58]
+ok: [172.29.216.41]
+ok: [172.29.216.59]
+ok: [172.29.216.60]
+ok: [9.21.53.15]
+
+TASK [Getting Number of Master nodes] ********************************************************************************************************************************************************************
+Monday 05 June 2017  03:09:07 +0000 (0:00:00.403)       0:00:26.453 ***********
+ok: [172.29.216.2]
+ok: [172.29.216.3]
+ok: [172.29.216.4]
+ok: [172.29.216.5]
+ok: [172.29.216.6]
+ok: [172.29.216.7]
+ok: [172.29.216.8]
+ok: [172.29.216.9]
+ok: [172.29.216.10]
+ok: [172.29.216.11]
+ok: [172.29.216.12]
+ok: [172.29.216.13]
+ok: [172.29.216.15]
+ok: [172.29.216.14]
+ok: [172.29.216.17]
+ok: [172.29.216.16]
+ok: [172.29.216.18]
+ok: [172.29.216.19]
+ok: [172.29.216.20]
+ok: [172.29.216.21]
+ok: [172.29.216.22]
+ok: [172.29.216.23]
+ok: [172.29.216.24]
+ok: [172.29.216.25]
+ok: [172.29.216.26]
+ok: [172.29.216.27]
+ok: [172.29.216.28]
+ok: [172.29.216.29]
+ok: [172.29.216.30]
+ok: [172.29.216.31]
+ok: [172.29.216.32]
+ok: [172.29.216.33]
+ok: [172.29.216.34]
+ok: [172.29.216.35]
+ok: [172.29.216.36]
+ok: [172.29.216.37]
+ok: [172.29.216.38]
+ok: [172.29.216.39]
+ok: [172.29.216.40]
+ok: [172.29.216.41]
+ok: [172.29.216.42]
+ok: [172.29.216.43]
+ok: [172.29.216.44]
+ok: [172.29.216.45]
+ok: [172.29.216.1]
+ok: [172.29.216.47]
+ok: [172.29.216.48]
+ok: [172.29.216.49]
+ok: [172.29.216.50]
+ok: [172.29.216.51]
+ok: [172.29.216.52]
+ok: [172.29.216.53]
+ok: [172.29.216.54]
+ok: [172.29.216.55]
+ok: [172.29.216.56]
+ok: [172.29.216.57]
+ok: [172.29.216.46]
+ok: [172.29.216.58]
+ok: [172.29.216.59]
+ok: [172.29.216.60]
+ok: [9.21.53.15]
+
+TASK [Getting Number of Proxy nodes] *********************************************************************************************************************************************************************
+Monday 05 June 2017  03:09:07 +0000 (0:00:00.400)       0:00:26.853 ***********
+ok: [172.29.216.1]
+ok: [172.29.216.2]
+ok: [172.29.216.4]
+ok: [172.29.216.5]
+ok: [172.29.216.6]
+ok: [172.29.216.3]
+ok: [172.29.216.7]
+ok: [172.29.216.8]
+ok: [172.29.216.10]
+ok: [172.29.216.11]
+ok: [172.29.216.9]
+ok: [172.29.216.12]
+ok: [172.29.216.13]
+ok: [172.29.216.15]
+ok: [172.29.216.16]
+ok: [172.29.216.18]
+ok: [172.29.216.17]
+ok: [172.29.216.19]
+ok: [172.29.216.20]
+ok: [172.29.216.21]
+ok: [172.29.216.22]
+ok: [172.29.216.23]
+ok: [172.29.216.24]
+ok: [172.29.216.25]
+ok: [172.29.216.26]
+ok: [172.29.216.27]
+ok: [172.29.216.28]
+ok: [172.29.216.29]
+ok: [172.29.216.30]
+ok: [172.29.216.31]
+ok: [172.29.216.32]
+ok: [172.29.216.33]
+ok: [172.29.216.35]
+ok: [172.29.216.34]
+ok: [172.29.216.36]
+ok: [172.29.216.37]
+ok: [172.29.216.38]
+ok: [172.29.216.39]
+ok: [172.29.216.40]
+ok: [172.29.216.41]
+ok: [172.29.216.42]
+ok: [172.29.216.43]
+ok: [172.29.216.44]
+ok: [172.29.216.45]
+ok: [172.29.216.46]
+ok: [172.29.216.47]
+ok: [172.29.216.48]
+ok: [172.29.216.49]
+ok: [172.29.216.50]
+ok: [172.29.216.51]
+ok: [172.29.216.52]
+ok: [172.29.216.53]
+ok: [172.29.216.54]
+ok: [172.29.216.55]
+ok: [172.29.216.56]
+ok: [172.29.216.57]
+ok: [172.29.216.58]
+ok: [172.29.216.14]
+ok: [172.29.216.59]
+ok: [172.29.216.60]
+ok: [9.21.53.15]
+
+TASK [Removing Kubelet container] ************************************************************************************************************************************************************************
+Monday 05 June 2017  03:09:07 +0000 (0:00:00.388)       0:00:27.242 ***********
+changed: [172.29.216.5]
+changed: [172.29.216.3]
+changed: [172.29.216.2]
+changed: [172.29.216.1]
+changed: [172.29.216.4]
+changed: [172.29.216.7]
+changed: [172.29.216.6]
+changed: [172.29.216.10]
+changed: [172.29.216.8]
+changed: [172.29.216.9]
+changed: [172.29.216.11]
+changed: [172.29.216.14]
+changed: [172.29.216.12]
+changed: [172.29.216.13]
+changed: [172.29.216.15]
+changed: [172.29.216.16]
+changed: [172.29.216.18]
+changed: [172.29.216.17]
+changed: [172.29.216.19]
+changed: [172.29.216.20]
+changed: [172.29.216.21]
+changed: [172.29.216.23]
+changed: [172.29.216.22]
+changed: [172.29.216.25]
+changed: [172.29.216.24]
+changed: [172.29.216.26]
+changed: [172.29.216.27]
+changed: [172.29.216.28]
+changed: [172.29.216.29]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.32]
+changed: [172.29.216.34]
+changed: [172.29.216.33]
+changed: [172.29.216.35]
+changed: [172.29.216.36]
+changed: [172.29.216.37]
+changed: [172.29.216.38]
+changed: [172.29.216.40]
+changed: [172.29.216.39]
+changed: [172.29.216.41]
+changed: [172.29.216.42]
+changed: [172.29.216.44]
+changed: [172.29.216.43]
+changed: [172.29.216.45]
+changed: [172.29.216.46]
+changed: [172.29.216.47]
+changed: [172.29.216.48]
+changed: [172.29.216.49]
+changed: [172.29.216.50]
+changed: [172.29.216.51]
+changed: [172.29.216.52]
+changed: [172.29.216.53]
+changed: [172.29.216.54]
+changed: [172.29.216.55]
+changed: [172.29.216.56]
+changed: [172.29.216.57]
+changed: [172.29.216.58]
+changed: [9.21.53.15]
+changed: [172.29.216.59]
+changed: [172.29.216.60]
+
+TASK [Disabling Kubelet service] *************************************************************************************************************************************************************************
+Monday 05 June 2017  03:09:24 +0000 (0:00:17.063)       0:00:44.305 ***********
+skipping: [172.29.216.2]
+skipping: [172.29.216.4]
+skipping: [172.29.216.5]
+skipping: [172.29.216.3]
+skipping: [172.29.216.6]
+skipping: [172.29.216.7]
+skipping: [172.29.216.8]
+skipping: [172.29.216.9]
+skipping: [172.29.216.10]
+skipping: [172.29.216.11]
+skipping: [172.29.216.12]
+skipping: [172.29.216.13]
+skipping: [172.29.216.14]
+skipping: [172.29.216.16]
+skipping: [172.29.216.17]
+skipping: [172.29.216.18]
+skipping: [172.29.216.19]
+skipping: [172.29.216.15]
+skipping: [172.29.216.20]
+skipping: [172.29.216.22]
+skipping: [172.29.216.21]
+skipping: [172.29.216.23]
+skipping: [172.29.216.24]
+skipping: [172.29.216.25]
+skipping: [172.29.216.26]
+skipping: [172.29.216.27]
+skipping: [172.29.216.28]
+skipping: [172.29.216.29]
+skipping: [172.29.216.30]
+skipping: [172.29.216.31]
+skipping: [172.29.216.33]
+skipping: [172.29.216.34]
+skipping: [172.29.216.35]
+skipping: [172.29.216.36]
+skipping: [172.29.216.37]
+skipping: [172.29.216.38]
+skipping: [172.29.216.32]
+skipping: [172.29.216.39]
+skipping: [172.29.216.40]
+skipping: [172.29.216.41]
+skipping: [172.29.216.42]
+skipping: [172.29.216.43]
+skipping: [172.29.216.44]
+skipping: [172.29.216.45]
+skipping: [172.29.216.46]
+skipping: [172.29.216.47]
+skipping: [172.29.216.48]
+skipping: [172.29.216.50]
+skipping: [172.29.216.51]
+skipping: [172.29.216.52]
+skipping: [172.29.216.53]
+skipping: [172.29.216.54]
+skipping: [172.29.216.55]
+skipping: [172.29.216.56]
+skipping: [172.29.216.49]
+skipping: [172.29.216.57]
+skipping: [172.29.216.58]
+skipping: [172.29.216.59]
+skipping: [172.29.216.1]
+skipping: [172.29.216.60]
+skipping: [9.21.53.15]
+
+TASK [Removing Flannel/Calico container] *****************************************************************************************************************************************************************
+Monday 05 June 2017  03:09:25 +0000 (0:00:00.363)       0:00:44.668 ***********
+changed: [172.29.216.4]
+changed: [172.29.216.3]
+changed: [172.29.216.2]
+changed: [172.29.216.1]
+changed: [172.29.216.5]
+changed: [172.29.216.6]
+changed: [172.29.216.8]
+changed: [172.29.216.7]
+changed: [172.29.216.9]
+changed: [172.29.216.10]
+changed: [172.29.216.11]
+changed: [172.29.216.13]
+changed: [172.29.216.12]
+changed: [172.29.216.14]
+changed: [172.29.216.15]
+changed: [172.29.216.16]
+changed: [172.29.216.18]
+changed: [172.29.216.17]
+changed: [172.29.216.20]
+changed: [172.29.216.19]
+changed: [172.29.216.21]
+changed: [172.29.216.22]
+changed: [172.29.216.23]
+changed: [172.29.216.24]
+changed: [172.29.216.25]
+changed: [172.29.216.26]
+changed: [172.29.216.28]
+changed: [172.29.216.27]
+changed: [172.29.216.29]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.32]
+changed: [172.29.216.33]
+changed: [172.29.216.34]
+changed: [172.29.216.35]
+changed: [172.29.216.36]
+changed: [172.29.216.37]
+changed: [172.29.216.38]
+changed: [172.29.216.39]
+changed: [172.29.216.40]
+changed: [172.29.216.41]
+changed: [172.29.216.42]
+changed: [172.29.216.43]
+changed: [172.29.216.44]
+changed: [172.29.216.45]
+changed: [172.29.216.46]
+changed: [172.29.216.47]
+changed: [172.29.216.48]
+changed: [172.29.216.49]
+changed: [172.29.216.50]
+changed: [172.29.216.51]
+changed: [172.29.216.52]
+changed: [172.29.216.54]
+changed: [172.29.216.53]
+changed: [172.29.216.55]
+changed: [172.29.216.57]
+changed: [172.29.216.56]
+changed: [172.29.216.58]
+changed: [172.29.216.59]
+changed: [172.29.216.60]
+changed: [9.21.53.15]
+
+TASK [Removing all other containers] *********************************************************************************************************************************************************************
+Monday 05 June 2017  03:09:36 +0000 (0:00:11.250)       0:00:55.919 ***********
+changed: [172.29.216.5]
+changed: [172.29.216.3]
+changed: [172.29.216.1]
+changed: [172.29.216.4]
+changed: [172.29.216.2]
+changed: [172.29.216.6]
+changed: [172.29.216.8]
+changed: [172.29.216.7]
+changed: [172.29.216.9]
+changed: [172.29.216.10]
+changed: [172.29.216.11]
+changed: [172.29.216.12]
+changed: [172.29.216.13]
+changed: [172.29.216.14]
+changed: [172.29.216.15]
+changed: [172.29.216.16]
+changed: [172.29.216.17]
+changed: [172.29.216.19]
+changed: [172.29.216.18]
+changed: [172.29.216.20]
+changed: [172.29.216.21]
+changed: [172.29.216.22]
+changed: [172.29.216.23]
+changed: [172.29.216.25]
+changed: [172.29.216.26]
+changed: [172.29.216.24]
+changed: [172.29.216.27]
+changed: [172.29.216.28]
+changed: [172.29.216.29]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.32]
+changed: [172.29.216.33]
+changed: [172.29.216.36]
+changed: [172.29.216.35]
+changed: [172.29.216.34]
+changed: [172.29.216.37]
+changed: [172.29.216.38]
+changed: [172.29.216.39]
+changed: [172.29.216.40]
+changed: [172.29.216.41]
+changed: [172.29.216.42]
+changed: [172.29.216.43]
+changed: [172.29.216.46]
+changed: [172.29.216.44]
+changed: [172.29.216.45]
+changed: [172.29.216.47]
+changed: [172.29.216.48]
+changed: [172.29.216.49]
+changed: [172.29.216.51]
+changed: [172.29.216.50]
+changed: [172.29.216.52]
+changed: [172.29.216.53]
+changed: [172.29.216.54]
+changed: [172.29.216.56]
+changed: [172.29.216.55]
+changed: [172.29.216.57]
+changed: [172.29.216.58]
+changed: [172.29.216.59]
+changed: [172.29.216.60]
+changed: [9.21.53.15]
+
+TASK [Unmounting k8s volumes] ****************************************************************************************************************************************************************************
+Monday 05 June 2017  03:09:56 +0000 (0:00:19.525)       0:01:15.444 ***********
+changed: [172.29.216.2]
+changed: [172.29.216.4]
+changed: [172.29.216.3]
+changed: [172.29.216.5]
+changed: [172.29.216.1]
+changed: [172.29.216.6]
+changed: [172.29.216.7]
+changed: [172.29.216.8]
+changed: [172.29.216.9]
+changed: [172.29.216.10]
+changed: [172.29.216.12]
+changed: [172.29.216.13]
+changed: [172.29.216.14]
+changed: [172.29.216.15]
+changed: [172.29.216.11]
+changed: [172.29.216.16]
+changed: [172.29.216.17]
+changed: [172.29.216.18]
+changed: [172.29.216.19]
+changed: [172.29.216.20]
+changed: [172.29.216.21]
+changed: [172.29.216.22]
+changed: [172.29.216.23]
+changed: [172.29.216.24]
+changed: [172.29.216.25]
+changed: [172.29.216.26]
+changed: [172.29.216.28]
+changed: [172.29.216.27]
+changed: [172.29.216.29]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.32]
+changed: [172.29.216.33]
+changed: [172.29.216.34]
+changed: [172.29.216.35]
+changed: [172.29.216.37]
+changed: [172.29.216.36]
+changed: [172.29.216.38]
+changed: [172.29.216.39]
+changed: [172.29.216.40]
+changed: [172.29.216.41]
+changed: [172.29.216.42]
+changed: [172.29.216.43]
+changed: [172.29.216.44]
+changed: [172.29.216.45]
+changed: [172.29.216.47]
+changed: [172.29.216.46]
+changed: [172.29.216.48]
+changed: [172.29.216.49]
+changed: [172.29.216.50]
+changed: [172.29.216.52]
+changed: [172.29.216.51]
+changed: [172.29.216.53]
+changed: [172.29.216.54]
+changed: [172.29.216.55]
+changed: [172.29.216.57]
+changed: [172.29.216.56]
+changed: [172.29.216.58]
+changed: [172.29.216.59]
+changed: [172.29.216.60]
+changed: [9.21.53.15]
+
+TASK [Removing k8s files] ********************************************************************************************************************************************************************************
+Monday 05 June 2017  03:10:06 +0000 (0:00:10.829)       0:01:26.274 ***********
+changed: [172.29.216.29] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.57] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.58] => (item=/var/log/pods)
+changed: [172.29.216.60] => (item=/var/log/containers)
+changed: [172.29.216.56] => (item=/var/log/pods)
+changed: [172.29.216.59] => (item=/var/log/containers)
+changed: [172.29.216.57] => (item=/var/log/pods)
+changed: [172.29.216.58] => (item=/var/log/containers)
+ok: [172.29.216.60] => (item=/var/lib/registry)
+changed: [172.29.216.56] => (item=/var/log/containers)
+ok: [172.29.216.59] => (item=/var/lib/registry)
+changed: [172.29.216.57] => (item=/var/log/containers)
+ok: [172.29.216.58] => (item=/var/lib/registry)
+ok: [172.29.216.60] => (item=/var/lib/mysql)
+ok: [172.29.216.56] => (item=/var/lib/registry)
+ok: [172.29.216.59] => (item=/var/lib/mysql)
+ok: [172.29.216.57] => (item=/var/lib/registry)
+ok: [172.29.216.58] => (item=/var/lib/mysql)
+ok: [172.29.216.60] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.56] => (item=/var/lib/mysql)
+ok: [172.29.216.59] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.57] => (item=/var/lib/mysql)
+ok: [172.29.216.58] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.60] => (item=/var/lib/kubelet)
+ok: [172.29.216.56] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.57] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.59] => (item=/var/lib/kubelet)
+changed: [172.29.216.58] => (item=/var/lib/kubelet)
+ok: [172.29.216.60] => (item=/var/lib/etcd)
+changed: [172.29.216.56] => (item=/var/lib/kubelet)
+changed: [172.29.216.57] => (item=/var/lib/kubelet)
+ok: [172.29.216.59] => (item=/var/lib/etcd)
+ok: [172.29.216.58] => (item=/var/lib/etcd)
+changed: [172.29.216.60] => (item=/opt/cni)
+ok: [172.29.216.57] => (item=/var/lib/etcd)
+ok: [172.29.216.56] => (item=/var/lib/etcd)
+changed: [172.29.216.59] => (item=/opt/cni)
+changed: [172.29.216.58] => (item=/opt/cni)
+changed: [172.29.216.60] => (item=/etc/cni)
+changed: [172.29.216.57] => (item=/opt/cni)
+changed: [172.29.216.56] => (item=/opt/cni)
+changed: [172.29.216.59] => (item=/etc/cni)
+changed: [172.29.216.58] => (item=/etc/cni)
+changed: [172.29.216.60] => (item=/etc/cfc)
+changed: [172.29.216.57] => (item=/etc/cni)
+changed: [172.29.216.56] => (item=/etc/cni)
+changed: [172.29.216.59] => (item=/etc/cfc)
+changed: [172.29.216.58] => (item=/etc/cfc)
+changed: [172.29.216.55] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.57] => (item=/etc/cfc)
+changed: [172.29.216.56] => (item=/etc/cfc)
+changed: [172.29.216.54] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.53] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.55] => (item=/var/log/pods)
+changed: [172.29.216.52] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.54] => (item=/var/log/pods)
+changed: [172.29.216.51] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.53] => (item=/var/log/pods)
+changed: [172.29.216.55] => (item=/var/log/containers)
+changed: [172.29.216.52] => (item=/var/log/pods)
+changed: [172.29.216.54] => (item=/var/log/containers)
+changed: [172.29.216.51] => (item=/var/log/pods)
+changed: [172.29.216.53] => (item=/var/log/containers)
+ok: [172.29.216.55] => (item=/var/lib/registry)
+changed: [172.29.216.52] => (item=/var/log/containers)
+ok: [172.29.216.54] => (item=/var/lib/registry)
+changed: [172.29.216.51] => (item=/var/log/containers)
+ok: [172.29.216.53] => (item=/var/lib/registry)
+ok: [172.29.216.55] => (item=/var/lib/mysql)
+ok: [172.29.216.52] => (item=/var/lib/registry)
+ok: [172.29.216.54] => (item=/var/lib/mysql)
+ok: [172.29.216.51] => (item=/var/lib/registry)
+ok: [172.29.216.53] => (item=/var/lib/mysql)
+ok: [172.29.216.55] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.52] => (item=/var/lib/mysql)
+ok: [172.29.216.54] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.51] => (item=/var/lib/mysql)
+ok: [172.29.216.53] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.55] => (item=/var/lib/kubelet)
+ok: [172.29.216.52] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.54] => (item=/var/lib/kubelet)
+ok: [172.29.216.51] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.53] => (item=/var/lib/kubelet)
+ok: [172.29.216.55] => (item=/var/lib/etcd)
+ok: [172.29.216.54] => (item=/var/lib/etcd)
+changed: [172.29.216.52] => (item=/var/lib/kubelet)
+changed: [172.29.216.51] => (item=/var/lib/kubelet)
+ok: [172.29.216.53] => (item=/var/lib/etcd)
+changed: [172.29.216.55] => (item=/opt/cni)
+changed: [172.29.216.54] => (item=/opt/cni)
+ok: [172.29.216.52] => (item=/var/lib/etcd)
+changed: [172.29.216.53] => (item=/opt/cni)
+ok: [172.29.216.51] => (item=/var/lib/etcd)
+changed: [172.29.216.55] => (item=/etc/cni)
+changed: [172.29.216.54] => (item=/etc/cni)
+changed: [172.29.216.52] => (item=/opt/cni)
+changed: [172.29.216.53] => (item=/etc/cni)
+changed: [172.29.216.51] => (item=/opt/cni)
+changed: [172.29.216.55] => (item=/etc/cfc)
+changed: [172.29.216.54] => (item=/etc/cfc)
+changed: [172.29.216.53] => (item=/etc/cfc)
+changed: [172.29.216.52] => (item=/etc/cni)
+changed: [172.29.216.51] => (item=/etc/cni)
+changed: [172.29.216.50] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.48] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.49] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.52] => (item=/etc/cfc)
+changed: [172.29.216.51] => (item=/etc/cfc)
+changed: [172.29.216.50] => (item=/var/log/pods)
+changed: [172.29.216.48] => (item=/var/log/pods)
+changed: [172.29.216.49] => (item=/var/log/pods)
+changed: [172.29.216.46] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.47] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.50] => (item=/var/log/containers)
+changed: [172.29.216.48] => (item=/var/log/containers)
+changed: [172.29.216.49] => (item=/var/log/containers)
+changed: [172.29.216.46] => (item=/var/log/pods)
+changed: [172.29.216.47] => (item=/var/log/pods)
+ok: [172.29.216.50] => (item=/var/lib/registry)
+ok: [172.29.216.48] => (item=/var/lib/registry)
+changed: [172.29.216.46] => (item=/var/log/containers)
+changed: [172.29.216.47] => (item=/var/log/containers)
+ok: [172.29.216.49] => (item=/var/lib/registry)
+ok: [172.29.216.50] => (item=/var/lib/mysql)
+ok: [172.29.216.48] => (item=/var/lib/mysql)
+ok: [172.29.216.46] => (item=/var/lib/registry)
+ok: [172.29.216.49] => (item=/var/lib/mysql)
+ok: [172.29.216.47] => (item=/var/lib/registry)
+ok: [172.29.216.50] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.48] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.49] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.46] => (item=/var/lib/mysql)
+ok: [172.29.216.47] => (item=/var/lib/mysql)
+changed: [172.29.216.50] => (item=/var/lib/kubelet)
+changed: [172.29.216.48] => (item=/var/lib/kubelet)
+changed: [172.29.216.49] => (item=/var/lib/kubelet)
+ok: [172.29.216.46] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.47] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.50] => (item=/var/lib/etcd)
+ok: [172.29.216.49] => (item=/var/lib/etcd)
+changed: [172.29.216.46] => (item=/var/lib/kubelet)
+changed: [172.29.216.47] => (item=/var/lib/kubelet)
+ok: [172.29.216.48] => (item=/var/lib/etcd)
+changed: [172.29.216.50] => (item=/opt/cni)
+changed: [172.29.216.49] => (item=/opt/cni)
+ok: [172.29.216.47] => (item=/var/lib/etcd)
+changed: [172.29.216.48] => (item=/opt/cni)
+ok: [172.29.216.46] => (item=/var/lib/etcd)
+changed: [172.29.216.50] => (item=/etc/cni)
+changed: [172.29.216.47] => (item=/opt/cni)
+changed: [172.29.216.49] => (item=/etc/cni)
+changed: [172.29.216.48] => (item=/etc/cni)
+changed: [172.29.216.46] => (item=/opt/cni)
+changed: [172.29.216.50] => (item=/etc/cfc)
+changed: [172.29.216.47] => (item=/etc/cni)
+changed: [172.29.216.48] => (item=/etc/cfc)
+changed: [172.29.216.49] => (item=/etc/cfc)
+changed: [172.29.216.46] => (item=/etc/cni)
+changed: [172.29.216.44] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.47] => (item=/etc/cfc)
+changed: [172.29.216.45] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.43] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.46] => (item=/etc/cfc)
+changed: [172.29.216.44] => (item=/var/log/pods)
+changed: [172.29.216.42] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.45] => (item=/var/log/pods)
+changed: [172.29.216.43] => (item=/var/log/pods)
+changed: [172.29.216.41] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.42] => (item=/var/log/pods)
+changed: [172.29.216.44] => (item=/var/log/containers)
+changed: [172.29.216.45] => (item=/var/log/containers)
+changed: [172.29.216.43] => (item=/var/log/containers)
+changed: [172.29.216.41] => (item=/var/log/pods)
+changed: [172.29.216.42] => (item=/var/log/containers)
+ok: [172.29.216.44] => (item=/var/lib/registry)
+ok: [172.29.216.45] => (item=/var/lib/registry)
+changed: [172.29.216.41] => (item=/var/log/containers)
+ok: [172.29.216.43] => (item=/var/lib/registry)
+ok: [172.29.216.42] => (item=/var/lib/registry)
+ok: [172.29.216.44] => (item=/var/lib/mysql)
+ok: [172.29.216.45] => (item=/var/lib/mysql)
+ok: [172.29.216.41] => (item=/var/lib/registry)
+ok: [172.29.216.43] => (item=/var/lib/mysql)
+ok: [172.29.216.42] => (item=/var/lib/mysql)
+ok: [172.29.216.44] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.41] => (item=/var/lib/mysql)
+ok: [172.29.216.45] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.43] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.42] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.41] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.44] => (item=/var/lib/kubelet)
+changed: [172.29.216.45] => (item=/var/lib/kubelet)
+changed: [172.29.216.43] => (item=/var/lib/kubelet)
+changed: [172.29.216.41] => (item=/var/lib/kubelet)
+changed: [172.29.216.42] => (item=/var/lib/kubelet)
+ok: [172.29.216.45] => (item=/var/lib/etcd)
+ok: [172.29.216.44] => (item=/var/lib/etcd)
+ok: [172.29.216.43] => (item=/var/lib/etcd)
+ok: [172.29.216.41] => (item=/var/lib/etcd)
+ok: [172.29.216.42] => (item=/var/lib/etcd)
+changed: [172.29.216.45] => (item=/opt/cni)
+changed: [172.29.216.44] => (item=/opt/cni)
+changed: [172.29.216.43] => (item=/opt/cni)
+changed: [172.29.216.41] => (item=/opt/cni)
+changed: [172.29.216.42] => (item=/opt/cni)
+changed: [172.29.216.45] => (item=/etc/cni)
+changed: [172.29.216.44] => (item=/etc/cni)
+changed: [172.29.216.43] => (item=/etc/cni)
+changed: [172.29.216.41] => (item=/etc/cni)
+changed: [172.29.216.42] => (item=/etc/cni)
+changed: [172.29.216.45] => (item=/etc/cfc)
+changed: [172.29.216.44] => (item=/etc/cfc)
+changed: [172.29.216.43] => (item=/etc/cfc)
+changed: [172.29.216.42] => (item=/etc/cfc)
+changed: [172.29.216.41] => (item=/etc/cfc)
+changed: [172.29.216.40] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.39] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.38] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.37] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.36] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.40] => (item=/var/log/pods)
+changed: [172.29.216.39] => (item=/var/log/pods)
+changed: [172.29.216.38] => (item=/var/log/pods)
+changed: [172.29.216.37] => (item=/var/log/pods)
+changed: [172.29.216.36] => (item=/var/log/pods)
+changed: [172.29.216.40] => (item=/var/log/containers)
+changed: [172.29.216.39] => (item=/var/log/containers)
+changed: [172.29.216.38] => (item=/var/log/containers)
+changed: [172.29.216.37] => (item=/var/log/containers)
+changed: [172.29.216.36] => (item=/var/log/containers)
+ok: [172.29.216.40] => (item=/var/lib/registry)
+ok: [172.29.216.39] => (item=/var/lib/registry)
+ok: [172.29.216.38] => (item=/var/lib/registry)
+ok: [172.29.216.37] => (item=/var/lib/registry)
+ok: [172.29.216.36] => (item=/var/lib/registry)
+ok: [172.29.216.40] => (item=/var/lib/mysql)
+ok: [172.29.216.39] => (item=/var/lib/mysql)
+ok: [172.29.216.38] => (item=/var/lib/mysql)
+ok: [172.29.216.37] => (item=/var/lib/mysql)
+ok: [172.29.216.36] => (item=/var/lib/mysql)
+ok: [172.29.216.40] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.39] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.38] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.37] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.36] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.40] => (item=/var/lib/kubelet)
+changed: [172.29.216.39] => (item=/var/lib/kubelet)
+changed: [172.29.216.38] => (item=/var/lib/kubelet)
+changed: [172.29.216.37] => (item=/var/lib/kubelet)
+changed: [172.29.216.36] => (item=/var/lib/kubelet)
+ok: [172.29.216.40] => (item=/var/lib/etcd)
+ok: [172.29.216.39] => (item=/var/lib/etcd)
+ok: [172.29.216.38] => (item=/var/lib/etcd)
+ok: [172.29.216.37] => (item=/var/lib/etcd)
+ok: [172.29.216.36] => (item=/var/lib/etcd)
+changed: [172.29.216.40] => (item=/opt/cni)
+changed: [172.29.216.39] => (item=/opt/cni)
+changed: [172.29.216.38] => (item=/opt/cni)
+changed: [172.29.216.37] => (item=/opt/cni)
+changed: [172.29.216.36] => (item=/opt/cni)
+changed: [172.29.216.40] => (item=/etc/cni)
+changed: [172.29.216.39] => (item=/etc/cni)
+changed: [172.29.216.38] => (item=/etc/cni)
+changed: [172.29.216.37] => (item=/etc/cni)
+changed: [172.29.216.36] => (item=/etc/cni)
+changed: [172.29.216.40] => (item=/etc/cfc)
+changed: [172.29.216.39] => (item=/etc/cfc)
+changed: [172.29.216.38] => (item=/etc/cfc)
+changed: [172.29.216.37] => (item=/etc/cfc)
+changed: [172.29.216.36] => (item=/etc/cfc)
+changed: [172.29.216.35] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.33] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.34] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.32] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.35] => (item=/var/log/pods)
+changed: [172.29.216.31] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.33] => (item=/var/log/pods)
+changed: [172.29.216.34] => (item=/var/log/pods)
+changed: [172.29.216.32] => (item=/var/log/pods)
+changed: [172.29.216.35] => (item=/var/log/containers)
+changed: [172.29.216.31] => (item=/var/log/pods)
+changed: [172.29.216.33] => (item=/var/log/containers)
+changed: [172.29.216.34] => (item=/var/log/containers)
+changed: [172.29.216.32] => (item=/var/log/containers)
+changed: [172.29.216.31] => (item=/var/log/containers)
+ok: [172.29.216.35] => (item=/var/lib/registry)
+ok: [172.29.216.33] => (item=/var/lib/registry)
+ok: [172.29.216.34] => (item=/var/lib/registry)
+ok: [172.29.216.32] => (item=/var/lib/registry)
+ok: [172.29.216.31] => (item=/var/lib/registry)
+ok: [172.29.216.35] => (item=/var/lib/mysql)
+ok: [172.29.216.33] => (item=/var/lib/mysql)
+ok: [172.29.216.34] => (item=/var/lib/mysql)
+ok: [172.29.216.32] => (item=/var/lib/mysql)
+ok: [172.29.216.31] => (item=/var/lib/mysql)
+ok: [172.29.216.35] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.34] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.33] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.32] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.31] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.35] => (item=/var/lib/kubelet)
+changed: [172.29.216.34] => (item=/var/lib/kubelet)
+changed: [172.29.216.33] => (item=/var/lib/kubelet)
+changed: [172.29.216.32] => (item=/var/lib/kubelet)
+changed: [172.29.216.31] => (item=/var/lib/kubelet)
+ok: [172.29.216.35] => (item=/var/lib/etcd)
+ok: [172.29.216.34] => (item=/var/lib/etcd)
+ok: [172.29.216.33] => (item=/var/lib/etcd)
+ok: [172.29.216.32] => (item=/var/lib/etcd)
+ok: [172.29.216.31] => (item=/var/lib/etcd)
+changed: [172.29.216.34] => (item=/opt/cni)
+changed: [172.29.216.35] => (item=/opt/cni)
+changed: [172.29.216.33] => (item=/opt/cni)
+changed: [172.29.216.32] => (item=/opt/cni)
+changed: [172.29.216.31] => (item=/opt/cni)
+changed: [172.29.216.34] => (item=/etc/cni)
+changed: [172.29.216.35] => (item=/etc/cni)
+changed: [172.29.216.33] => (item=/etc/cni)
+changed: [172.29.216.32] => (item=/etc/cni)
+changed: [172.29.216.31] => (item=/etc/cni)
+changed: [172.29.216.35] => (item=/etc/cfc)
+changed: [172.29.216.34] => (item=/etc/cfc)
+changed: [172.29.216.33] => (item=/etc/cfc)
+changed: [172.29.216.32] => (item=/etc/cfc)
+changed: [172.29.216.31] => (item=/etc/cfc)
+changed: [172.29.216.30] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.28] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.26] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.27] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.29] => (item=/var/log/pods)
+changed: [172.29.216.30] => (item=/var/log/pods)
+changed: [172.29.216.28] => (item=/var/log/pods)
+changed: [172.29.216.26] => (item=/var/log/pods)
+changed: [172.29.216.27] => (item=/var/log/pods)
+changed: [172.29.216.29] => (item=/var/log/containers)
+changed: [172.29.216.30] => (item=/var/log/containers)
+changed: [172.29.216.28] => (item=/var/log/containers)
+changed: [172.29.216.26] => (item=/var/log/containers)
+changed: [172.29.216.27] => (item=/var/log/containers)
+ok: [172.29.216.30] => (item=/var/lib/registry)
+ok: [172.29.216.29] => (item=/var/lib/registry)
+ok: [172.29.216.28] => (item=/var/lib/registry)
+ok: [172.29.216.26] => (item=/var/lib/registry)
+ok: [172.29.216.27] => (item=/var/lib/registry)
+ok: [172.29.216.30] => (item=/var/lib/mysql)
+ok: [172.29.216.29] => (item=/var/lib/mysql)
+ok: [172.29.216.28] => (item=/var/lib/mysql)
+ok: [172.29.216.27] => (item=/var/lib/mysql)
+ok: [172.29.216.26] => (item=/var/lib/mysql)
+ok: [172.29.216.29] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.30] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.28] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.27] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.26] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.30] => (item=/var/lib/kubelet)
+changed: [172.29.216.29] => (item=/var/lib/kubelet)
+changed: [172.29.216.28] => (item=/var/lib/kubelet)
+changed: [172.29.216.27] => (item=/var/lib/kubelet)
+changed: [172.29.216.26] => (item=/var/lib/kubelet)
+ok: [172.29.216.29] => (item=/var/lib/etcd)
+ok: [172.29.216.30] => (item=/var/lib/etcd)
+ok: [172.29.216.28] => (item=/var/lib/etcd)
+ok: [172.29.216.27] => (item=/var/lib/etcd)
+ok: [172.29.216.26] => (item=/var/lib/etcd)
+changed: [172.29.216.29] => (item=/opt/cni)
+changed: [172.29.216.30] => (item=/opt/cni)
+changed: [172.29.216.28] => (item=/opt/cni)
+changed: [172.29.216.27] => (item=/opt/cni)
+changed: [172.29.216.26] => (item=/opt/cni)
+changed: [172.29.216.29] => (item=/etc/cni)
+changed: [172.29.216.30] => (item=/etc/cni)
+changed: [172.29.216.28] => (item=/etc/cni)
+changed: [172.29.216.27] => (item=/etc/cni)
+changed: [172.29.216.26] => (item=/etc/cni)
+changed: [172.29.216.29] => (item=/etc/cfc)
+changed: [172.29.216.30] => (item=/etc/cfc)
+changed: [172.29.216.28] => (item=/etc/cfc)
+changed: [172.29.216.27] => (item=/etc/cfc)
+changed: [172.29.216.26] => (item=/etc/cfc)
+changed: [172.29.216.25] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.24] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.23] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.22] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.21] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.25] => (item=/var/log/pods)
+changed: [172.29.216.24] => (item=/var/log/pods)
+changed: [172.29.216.23] => (item=/var/log/pods)
+changed: [172.29.216.22] => (item=/var/log/pods)
+changed: [172.29.216.21] => (item=/var/log/pods)
+changed: [172.29.216.25] => (item=/var/log/containers)
+changed: [172.29.216.24] => (item=/var/log/containers)
+changed: [172.29.216.23] => (item=/var/log/containers)
+changed: [172.29.216.22] => (item=/var/log/containers)
+changed: [172.29.216.21] => (item=/var/log/containers)
+ok: [172.29.216.25] => (item=/var/lib/registry)
+ok: [172.29.216.24] => (item=/var/lib/registry)
+ok: [172.29.216.23] => (item=/var/lib/registry)
+ok: [172.29.216.22] => (item=/var/lib/registry)
+ok: [172.29.216.21] => (item=/var/lib/registry)
+ok: [172.29.216.25] => (item=/var/lib/mysql)
+ok: [172.29.216.24] => (item=/var/lib/mysql)
+ok: [172.29.216.23] => (item=/var/lib/mysql)
+ok: [172.29.216.22] => (item=/var/lib/mysql)
+ok: [172.29.216.21] => (item=/var/lib/mysql)
+ok: [172.29.216.25] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.24] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.23] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.22] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.21] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.25] => (item=/var/lib/kubelet)
+changed: [172.29.216.24] => (item=/var/lib/kubelet)
+changed: [172.29.216.23] => (item=/var/lib/kubelet)
+changed: [172.29.216.22] => (item=/var/lib/kubelet)
+changed: [172.29.216.21] => (item=/var/lib/kubelet)
+ok: [172.29.216.25] => (item=/var/lib/etcd)
+ok: [172.29.216.24] => (item=/var/lib/etcd)
+ok: [172.29.216.23] => (item=/var/lib/etcd)
+ok: [172.29.216.22] => (item=/var/lib/etcd)
+ok: [172.29.216.21] => (item=/var/lib/etcd)
+changed: [172.29.216.25] => (item=/opt/cni)
+changed: [172.29.216.24] => (item=/opt/cni)
+changed: [172.29.216.23] => (item=/opt/cni)
+changed: [172.29.216.22] => (item=/opt/cni)
+changed: [172.29.216.21] => (item=/opt/cni)
+changed: [172.29.216.25] => (item=/etc/cni)
+changed: [172.29.216.24] => (item=/etc/cni)
+changed: [172.29.216.23] => (item=/etc/cni)
+changed: [172.29.216.22] => (item=/etc/cni)
+changed: [172.29.216.21] => (item=/etc/cni)
+changed: [172.29.216.25] => (item=/etc/cfc)
+changed: [172.29.216.24] => (item=/etc/cfc)
+changed: [172.29.216.23] => (item=/etc/cfc)
+changed: [172.29.216.22] => (item=/etc/cfc)
+changed: [172.29.216.21] => (item=/etc/cfc)
+changed: [172.29.216.20] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.19] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.18] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.17] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.16] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.20] => (item=/var/log/pods)
+changed: [172.29.216.19] => (item=/var/log/pods)
+changed: [172.29.216.18] => (item=/var/log/pods)
+changed: [172.29.216.17] => (item=/var/log/pods)
+changed: [172.29.216.16] => (item=/var/log/pods)
+changed: [172.29.216.20] => (item=/var/log/containers)
+changed: [172.29.216.19] => (item=/var/log/containers)
+changed: [172.29.216.18] => (item=/var/log/containers)
+changed: [172.29.216.17] => (item=/var/log/containers)
+changed: [172.29.216.16] => (item=/var/log/containers)
+ok: [172.29.216.20] => (item=/var/lib/registry)
+ok: [172.29.216.19] => (item=/var/lib/registry)
+ok: [172.29.216.17] => (item=/var/lib/registry)
+ok: [172.29.216.18] => (item=/var/lib/registry)
+ok: [172.29.216.16] => (item=/var/lib/registry)
+ok: [172.29.216.20] => (item=/var/lib/mysql)
+ok: [172.29.216.19] => (item=/var/lib/mysql)
+ok: [172.29.216.17] => (item=/var/lib/mysql)
+ok: [172.29.216.18] => (item=/var/lib/mysql)
+ok: [172.29.216.16] => (item=/var/lib/mysql)
+ok: [172.29.216.20] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.19] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.17] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.18] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.16] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.20] => (item=/var/lib/kubelet)
+changed: [172.29.216.19] => (item=/var/lib/kubelet)
+changed: [172.29.216.17] => (item=/var/lib/kubelet)
+changed: [172.29.216.18] => (item=/var/lib/kubelet)
+changed: [172.29.216.16] => (item=/var/lib/kubelet)
+ok: [172.29.216.20] => (item=/var/lib/etcd)
+ok: [172.29.216.19] => (item=/var/lib/etcd)
+ok: [172.29.216.17] => (item=/var/lib/etcd)
+ok: [172.29.216.18] => (item=/var/lib/etcd)
+ok: [172.29.216.16] => (item=/var/lib/etcd)
+changed: [172.29.216.20] => (item=/opt/cni)
+changed: [172.29.216.19] => (item=/opt/cni)
+changed: [172.29.216.17] => (item=/opt/cni)
+changed: [172.29.216.18] => (item=/opt/cni)
+changed: [172.29.216.16] => (item=/opt/cni)
+changed: [172.29.216.20] => (item=/etc/cni)
+changed: [172.29.216.19] => (item=/etc/cni)
+changed: [172.29.216.17] => (item=/etc/cni)
+changed: [172.29.216.18] => (item=/etc/cni)
+changed: [172.29.216.16] => (item=/etc/cni)
+changed: [172.29.216.20] => (item=/etc/cfc)
+changed: [172.29.216.19] => (item=/etc/cfc)
+changed: [172.29.216.17] => (item=/etc/cfc)
+changed: [172.29.216.18] => (item=/etc/cfc)
+changed: [172.29.216.16] => (item=/etc/cfc)
+changed: [172.29.216.15] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.14] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.11] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.13] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.12] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.15] => (item=/var/log/pods)
+changed: [172.29.216.14] => (item=/var/log/pods)
+changed: [172.29.216.13] => (item=/var/log/pods)
+changed: [172.29.216.11] => (item=/var/log/pods)
+changed: [172.29.216.12] => (item=/var/log/pods)
+changed: [172.29.216.15] => (item=/var/log/containers)
+changed: [172.29.216.14] => (item=/var/log/containers)
+changed: [172.29.216.13] => (item=/var/log/containers)
+changed: [172.29.216.11] => (item=/var/log/containers)
+changed: [172.29.216.12] => (item=/var/log/containers)
+ok: [172.29.216.15] => (item=/var/lib/registry)
+ok: [172.29.216.14] => (item=/var/lib/registry)
+ok: [172.29.216.13] => (item=/var/lib/registry)
+ok: [172.29.216.11] => (item=/var/lib/registry)
+ok: [172.29.216.12] => (item=/var/lib/registry)
+ok: [172.29.216.15] => (item=/var/lib/mysql)
+ok: [172.29.216.14] => (item=/var/lib/mysql)
+ok: [172.29.216.12] => (item=/var/lib/mysql)
+ok: [172.29.216.11] => (item=/var/lib/mysql)
+ok: [172.29.216.13] => (item=/var/lib/mysql)
+ok: [172.29.216.15] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.14] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.13] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.11] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.12] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.15] => (item=/var/lib/kubelet)
+changed: [172.29.216.14] => (item=/var/lib/kubelet)
+changed: [172.29.216.13] => (item=/var/lib/kubelet)
+changed: [172.29.216.12] => (item=/var/lib/kubelet)
+changed: [172.29.216.11] => (item=/var/lib/kubelet)
+ok: [172.29.216.15] => (item=/var/lib/etcd)
+ok: [172.29.216.14] => (item=/var/lib/etcd)
+ok: [172.29.216.13] => (item=/var/lib/etcd)
+ok: [172.29.216.12] => (item=/var/lib/etcd)
+ok: [172.29.216.11] => (item=/var/lib/etcd)
+changed: [172.29.216.15] => (item=/opt/cni)
+changed: [172.29.216.56] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.14] => (item=/opt/cni)
+changed: [172.29.216.13] => (item=/opt/cni)
+changed: [172.29.216.12] => (item=/opt/cni)
+changed: [172.29.216.11] => (item=/opt/cni)
+changed: [172.29.216.15] => (item=/etc/cni)
+changed: [172.29.216.14] => (item=/etc/cni)
+changed: [172.29.216.59] => (item=/var/log/pods)
+changed: [172.29.216.13] => (item=/etc/cni)
+changed: [172.29.216.12] => (item=/etc/cni)
+changed: [172.29.216.11] => (item=/etc/cni)
+changed: [172.29.216.15] => (item=/etc/cfc)
+changed: [172.29.216.14] => (item=/etc/cfc)
+changed: [172.29.216.13] => (item=/etc/cfc)
+changed: [172.29.216.12] => (item=/etc/cfc)
+changed: [172.29.216.11] => (item=/etc/cfc)
+changed: [172.29.216.10] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.8] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.9] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.6] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.7] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.10] => (item=/var/log/pods)
+changed: [172.29.216.8] => (item=/var/log/pods)
+changed: [172.29.216.9] => (item=/var/log/pods)
+changed: [172.29.216.6] => (item=/var/log/pods)
+changed: [172.29.216.7] => (item=/var/log/pods)
+changed: [172.29.216.10] => (item=/var/log/containers)
+changed: [172.29.216.8] => (item=/var/log/containers)
+changed: [172.29.216.9] => (item=/var/log/containers)
+changed: [172.29.216.6] => (item=/var/log/containers)
+changed: [172.29.216.7] => (item=/var/log/containers)
+ok: [172.29.216.10] => (item=/var/lib/registry)
+ok: [172.29.216.8] => (item=/var/lib/registry)
+ok: [172.29.216.9] => (item=/var/lib/registry)
+ok: [172.29.216.6] => (item=/var/lib/registry)
+ok: [172.29.216.7] => (item=/var/lib/registry)
+ok: [172.29.216.10] => (item=/var/lib/mysql)
+ok: [172.29.216.8] => (item=/var/lib/mysql)
+ok: [172.29.216.9] => (item=/var/lib/mysql)
+ok: [172.29.216.6] => (item=/var/lib/mysql)
+ok: [172.29.216.7] => (item=/var/lib/mysql)
+ok: [172.29.216.10] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.8] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.9] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.6] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.7] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.10] => (item=/var/lib/kubelet)
+changed: [172.29.216.8] => (item=/var/lib/kubelet)
+changed: [172.29.216.9] => (item=/var/lib/kubelet)
+changed: [172.29.216.6] => (item=/var/lib/kubelet)
+changed: [172.29.216.7] => (item=/var/lib/kubelet)
+ok: [172.29.216.10] => (item=/var/lib/etcd)
+ok: [172.29.216.8] => (item=/var/lib/etcd)
+ok: [172.29.216.9] => (item=/var/lib/etcd)
+ok: [172.29.216.6] => (item=/var/lib/etcd)
+ok: [172.29.216.7] => (item=/var/lib/etcd)
+changed: [172.29.216.10] => (item=/opt/cni)
+changed: [172.29.216.8] => (item=/opt/cni)
+changed: [172.29.216.9] => (item=/opt/cni)
+changed: [172.29.216.6] => (item=/opt/cni)
+changed: [172.29.216.7] => (item=/opt/cni)
+changed: [172.29.216.10] => (item=/etc/cni)
+changed: [172.29.216.8] => (item=/etc/cni)
+changed: [172.29.216.9] => (item=/etc/cni)
+changed: [172.29.216.7] => (item=/etc/cni)
+changed: [172.29.216.6] => (item=/etc/cni)
+changed: [172.29.216.10] => (item=/etc/cfc)
+changed: [172.29.216.9] => (item=/etc/cfc)
+changed: [172.29.216.8] => (item=/etc/cfc)
+changed: [172.29.216.7] => (item=/etc/cfc)
+changed: [172.29.216.6] => (item=/etc/cfc)
+changed: [172.29.216.5] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.2] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.3] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.1] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.4] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.5] => (item=/var/log/pods)
+changed: [172.29.216.2] => (item=/var/log/pods)
+changed: [172.29.216.3] => (item=/var/log/pods)
+changed: [172.29.216.1] => (item=/var/log/pods)
+changed: [172.29.216.4] => (item=/var/log/pods)
+changed: [172.29.216.5] => (item=/var/log/containers)
+changed: [172.29.216.2] => (item=/var/log/containers)
+changed: [172.29.216.3] => (item=/var/log/containers)
+changed: [172.29.216.1] => (item=/var/log/containers)
+changed: [172.29.216.4] => (item=/var/log/containers)
+ok: [172.29.216.5] => (item=/var/lib/registry)
+ok: [172.29.216.3] => (item=/var/lib/registry)
+ok: [172.29.216.2] => (item=/var/lib/registry)
+ok: [172.29.216.4] => (item=/var/lib/registry)
+ok: [172.29.216.1] => (item=/var/lib/registry)
+ok: [172.29.216.5] => (item=/var/lib/mysql)
+ok: [172.29.216.3] => (item=/var/lib/mysql)
+ok: [172.29.216.2] => (item=/var/lib/mysql)
+ok: [172.29.216.4] => (item=/var/lib/mysql)
+ok: [172.29.216.1] => (item=/var/lib/mysql)
+ok: [172.29.216.5] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.2] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.3] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.1] => (item=/var/lib/elasticsearch)
+ok: [172.29.216.4] => (item=/var/lib/elasticsearch)
+changed: [172.29.216.5] => (item=/var/lib/kubelet)
+changed: [172.29.216.2] => (item=/var/lib/kubelet)
+changed: [172.29.216.4] => (item=/var/lib/kubelet)
+changed: [172.29.216.1] => (item=/var/lib/kubelet)
+changed: [172.29.216.3] => (item=/var/lib/kubelet)
+ok: [172.29.216.5] => (item=/var/lib/etcd)
+ok: [172.29.216.2] => (item=/var/lib/etcd)
+ok: [172.29.216.4] => (item=/var/lib/etcd)
+ok: [172.29.216.1] => (item=/var/lib/etcd)
+ok: [172.29.216.3] => (item=/var/lib/etcd)
+changed: [172.29.216.5] => (item=/opt/cni)
+changed: [172.29.216.2] => (item=/opt/cni)
+changed: [172.29.216.4] => (item=/opt/cni)
+changed: [172.29.216.1] => (item=/opt/cni)
+changed: [172.29.216.3] => (item=/opt/cni)
+changed: [172.29.216.2] => (item=/etc/cni)
+changed: [172.29.216.5] => (item=/etc/cni)
+changed: [172.29.216.1] => (item=/etc/cni)
+changed: [172.29.216.4] => (item=/etc/cni)
+changed: [172.29.216.3] => (item=/etc/cni)
+changed: [172.29.216.5] => (item=/etc/cfc)
+changed: [172.29.216.2] => (item=/etc/cfc)
+changed: [172.29.216.1] => (item=/etc/cfc)
+changed: [172.29.216.4] => (item=/etc/cfc)
+changed: [172.29.216.3] => (item=/etc/cfc)
+changed: [172.29.216.60] => (item=/var/log/pods)
+changed: [172.29.216.58] => (item=/var/lib/nvidia-docker)
+changed: [9.21.53.15] => (item=/etc/cfc)
+changed: [172.29.216.59] => (item=/var/lib/nvidia-docker)
+changed: [172.29.216.60] => (item=/var/lib/nvidia-docker)
+changed: [9.21.53.15] => (item=/etc/cni)
+changed: [9.21.53.15] => (item=/opt/cni)
+changed: [9.21.53.15] => (item=/var/lib/etcd)
+changed: [9.21.53.15] => (item=/var/lib/kubelet)
+changed: [9.21.53.15] => (item=/var/lib/elasticsearch)
+changed: [9.21.53.15] => (item=/var/lib/mysql)
+ok: [9.21.53.15] => (item=/var/lib/registry)
+changed: [9.21.53.15] => (item=/var/log/containers)
+changed: [9.21.53.15] => (item=/var/log/pods)
+changed: [9.21.53.15] => (item=/var/lib/nvidia-docker)
+
+TASK [Removing Docker volumes] ***************************************************************************************************************************************************************************
+Monday 05 June 2017  03:12:00 +0000 (0:01:53.965)       0:03:20.239 ***********
+changed: [172.29.216.2]
+changed: [172.29.216.3]
+changed: [172.29.216.4]
+changed: [172.29.216.5]
+changed: [172.29.216.1]
+changed: [172.29.216.6]
+changed: [172.29.216.9]
+changed: [172.29.216.7]
+changed: [172.29.216.8]
+changed: [172.29.216.10]
+changed: [172.29.216.11]
+changed: [172.29.216.12]
+changed: [172.29.216.13]
+changed: [172.29.216.15]
+changed: [172.29.216.14]
+changed: [172.29.216.16]
+changed: [172.29.216.18]
+changed: [172.29.216.17]
+changed: [172.29.216.19]
+changed: [172.29.216.20]
+changed: [172.29.216.21]
+changed: [172.29.216.23]
+changed: [172.29.216.22]
+changed: [172.29.216.24]
+changed: [172.29.216.25]
+changed: [172.29.216.26]
+changed: [172.29.216.27]
+changed: [172.29.216.28]
+changed: [172.29.216.29]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.32]
+changed: [172.29.216.33]
+changed: [172.29.216.34]
+changed: [172.29.216.35]
+changed: [172.29.216.36]
+changed: [172.29.216.38]
+changed: [172.29.216.37]
+changed: [172.29.216.39]
+changed: [172.29.216.40]
+changed: [172.29.216.41]
+changed: [172.29.216.43]
+changed: [172.29.216.42]
+changed: [172.29.216.44]
+changed: [172.29.216.45]
+changed: [172.29.216.46]
+changed: [172.29.216.47]
+changed: [172.29.216.49]
+changed: [172.29.216.48]
+changed: [172.29.216.50]
+changed: [172.29.216.51]
+changed: [172.29.216.52]
+changed: [172.29.216.53]
+changed: [172.29.216.54]
+changed: [172.29.216.55]
+changed: [172.29.216.56]
+changed: [172.29.216.57]
+changed: [172.29.216.58]
+changed: [172.29.216.59]
+changed: [172.29.216.60]
+changed: [9.21.53.15]
+
+TASK [Cleaning up /etc/hosts] ****************************************************************************************************************************************************************************
+Monday 05 June 2017  03:12:11 +0000 (0:00:11.082)       0:03:31.322 ***********
+changed: [172.29.216.3]
+changed: [172.29.216.2]
+changed: [172.29.216.4]
+changed: [172.29.216.5]
+changed: [172.29.216.1]
+changed: [172.29.216.7]
+changed: [172.29.216.6]
+changed: [172.29.216.9]
+changed: [172.29.216.8]
+changed: [172.29.216.10]
+changed: [172.29.216.11]
+changed: [172.29.216.12]
+changed: [172.29.216.13]
+changed: [172.29.216.15]
+changed: [172.29.216.14]
+changed: [172.29.216.16]
+changed: [172.29.216.17]
+changed: [172.29.216.18]
+changed: [172.29.216.19]
+changed: [172.29.216.20]
+changed: [172.29.216.22]
+changed: [172.29.216.21]
+changed: [172.29.216.24]
+changed: [172.29.216.25]
+changed: [172.29.216.23]
+changed: [172.29.216.26]
+changed: [172.29.216.27]
+changed: [172.29.216.29]
+changed: [172.29.216.28]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.32]
+changed: [172.29.216.33]
+changed: [172.29.216.34]
+changed: [172.29.216.35]
+changed: [172.29.216.36]
+changed: [172.29.216.37]
+changed: [172.29.216.38]
+changed: [172.29.216.39]
+changed: [172.29.216.40]
+changed: [172.29.216.41]
+changed: [172.29.216.42]
+changed: [172.29.216.43]
+changed: [172.29.216.44]
+changed: [172.29.216.45]
+changed: [172.29.216.46]
+changed: [172.29.216.47]
+changed: [172.29.216.48]
+changed: [172.29.216.49]
+changed: [172.29.216.50]
+changed: [172.29.216.51]
+changed: [172.29.216.52]
+changed: [172.29.216.53]
+changed: [172.29.216.54]
+changed: [172.29.216.55]
+changed: [172.29.216.56]
+changed: [172.29.216.57]
+changed: [172.29.216.58]
+changed: [172.29.216.59]
+changed: [172.29.216.60]
+changed: [9.21.53.15]
+
+TASK [Flushing iptables] *********************************************************************************************************************************************************************************
+Monday 05 June 2017  03:12:22 +0000 (0:00:10.768)       0:03:42.090 ***********
+changed: [172.29.216.1]
+changed: [172.29.216.5]
+changed: [172.29.216.4]
+changed: [172.29.216.2]
+changed: [172.29.216.3]
+changed: [172.29.216.8]
+changed: [172.29.216.6]
+changed: [172.29.216.7]
+changed: [172.29.216.9]
+changed: [172.29.216.10]
+changed: [172.29.216.12]
+changed: [172.29.216.11]
+changed: [172.29.216.13]
+changed: [172.29.216.15]
+changed: [172.29.216.14]
+changed: [172.29.216.16]
+changed: [172.29.216.18]
+changed: [172.29.216.19]
+changed: [172.29.216.17]
+changed: [172.29.216.20]
+changed: [172.29.216.22]
+changed: [172.29.216.21]
+changed: [172.29.216.23]
+changed: [172.29.216.24]
+changed: [172.29.216.25]
+changed: [172.29.216.26]
+changed: [172.29.216.28]
+changed: [172.29.216.29]
+changed: [172.29.216.27]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.34]
+changed: [172.29.216.32]
+changed: [172.29.216.33]
+changed: [172.29.216.35]
+changed: [172.29.216.37]
+changed: [172.29.216.36]
+changed: [172.29.216.39]
+changed: [172.29.216.38]
+changed: [172.29.216.40]
+changed: [172.29.216.42]
+changed: [172.29.216.41]
+changed: [172.29.216.44]
+changed: [172.29.216.43]
+changed: [172.29.216.45]
+changed: [172.29.216.46]
+changed: [172.29.216.47]
+changed: [172.29.216.48]
+changed: [172.29.216.49]
+changed: [172.29.216.50]
+changed: [172.29.216.51]
+changed: [172.29.216.53]
+changed: [172.29.216.54]
+changed: [172.29.216.52]
+changed: [172.29.216.55]
+changed: [172.29.216.56]
+changed: [172.29.216.57]
+changed: [172.29.216.58]
+changed: [172.29.216.60]
+changed: [172.29.216.59]
+changed: [9.21.53.15]
+
+TASK [Cleaning up cluster vip] ***************************************************************************************************************************************************************************
+Monday 05 June 2017  03:12:33 +0000 (0:00:10.877)       0:03:52.967 ***********
+skipping: [172.29.216.1]
+skipping: [172.29.216.2]
+skipping: [172.29.216.3]
+skipping: [172.29.216.4]
+skipping: [172.29.216.5]
+skipping: [172.29.216.6]
+skipping: [172.29.216.7]
+skipping: [172.29.216.8]
+skipping: [172.29.216.9]
+skipping: [172.29.216.10]
+skipping: [172.29.216.11]
+skipping: [172.29.216.12]
+skipping: [172.29.216.13]
+skipping: [172.29.216.14]
+skipping: [172.29.216.15]
+skipping: [172.29.216.16]
+skipping: [172.29.216.18]
+skipping: [172.29.216.17]
+skipping: [172.29.216.19]
+skipping: [172.29.216.20]
+skipping: [172.29.216.21]
+skipping: [172.29.216.22]
+skipping: [172.29.216.23]
+skipping: [172.29.216.24]
+skipping: [172.29.216.25]
+skipping: [172.29.216.26]
+skipping: [172.29.216.27]
+skipping: [172.29.216.28]
+skipping: [172.29.216.29]
+skipping: [172.29.216.30]
+skipping: [172.29.216.31]
+skipping: [172.29.216.32]
+skipping: [172.29.216.34]
+skipping: [172.29.216.33]
+skipping: [172.29.216.35]
+skipping: [172.29.216.36]
+skipping: [172.29.216.37]
+skipping: [172.29.216.38]
+skipping: [172.29.216.39]
+skipping: [172.29.216.40]
+skipping: [172.29.216.41]
+skipping: [172.29.216.42]
+skipping: [172.29.216.43]
+skipping: [172.29.216.44]
+skipping: [172.29.216.45]
+skipping: [172.29.216.46]
+skipping: [172.29.216.47]
+skipping: [172.29.216.48]
+skipping: [172.29.216.50]
+skipping: [172.29.216.49]
+skipping: [172.29.216.51]
+skipping: [172.29.216.53]
+skipping: [172.29.216.52]
+skipping: [172.29.216.54]
+skipping: [172.29.216.55]
+skipping: [172.29.216.56]
+skipping: [172.29.216.57]
+skipping: [172.29.216.58]
+skipping: [172.29.216.59]
+skipping: [172.29.216.60]
+skipping: [9.21.53.15]
+
+TASK [Cleaning up proxy vip] *****************************************************************************************************************************************************************************
+Monday 05 June 2017  03:12:33 +0000 (0:00:00.361)       0:03:53.329 ***********
+skipping: [172.29.216.1]
+skipping: [172.29.216.2]
+skipping: [172.29.216.4]
+skipping: [172.29.216.3]
+skipping: [172.29.216.5]
+skipping: [172.29.216.6]
+skipping: [172.29.216.7]
+skipping: [172.29.216.8]
+skipping: [172.29.216.9]
+skipping: [172.29.216.10]
+skipping: [172.29.216.11]
+skipping: [172.29.216.12]
+skipping: [172.29.216.13]
+skipping: [172.29.216.14]
+skipping: [172.29.216.16]
+skipping: [172.29.216.15]
+skipping: [172.29.216.17]
+skipping: [172.29.216.18]
+skipping: [172.29.216.19]
+skipping: [172.29.216.20]
+skipping: [172.29.216.21]
+skipping: [172.29.216.22]
+skipping: [172.29.216.23]
+skipping: [172.29.216.24]
+skipping: [172.29.216.25]
+skipping: [172.29.216.26]
+skipping: [172.29.216.27]
+skipping: [172.29.216.28]
+skipping: [172.29.216.29]
+skipping: [172.29.216.30]
+skipping: [172.29.216.32]
+skipping: [172.29.216.31]
+skipping: [172.29.216.33]
+skipping: [172.29.216.34]
+skipping: [172.29.216.36]
+skipping: [172.29.216.35]
+skipping: [172.29.216.37]
+skipping: [172.29.216.38]
+skipping: [172.29.216.39]
+skipping: [172.29.216.40]
+skipping: [172.29.216.41]
+skipping: [172.29.216.42]
+skipping: [172.29.216.43]
+skipping: [172.29.216.44]
+skipping: [172.29.216.45]
+skipping: [172.29.216.46]
+skipping: [172.29.216.48]
+skipping: [172.29.216.47]
+skipping: [172.29.216.49]
+skipping: [172.29.216.50]
+skipping: [172.29.216.51]
+skipping: [172.29.216.52]
+skipping: [172.29.216.53]
+skipping: [172.29.216.54]
+skipping: [172.29.216.55]
+skipping: [172.29.216.56]
+skipping: [172.29.216.57]
+skipping: [172.29.216.58]
+skipping: [172.29.216.59]
+skipping: [172.29.216.60]
+skipping: [9.21.53.15]
+
+TASK [Removing flannel config] ***************************************************************************************************************************************************************************
+Monday 05 June 2017  03:12:34 +0000 (0:00:00.370)       0:03:53.699 ***********
+skipping: [172.29.216.13] => (item=/etc/flannel)
+skipping: [172.29.216.14] => (item=/etc/flannel)
+skipping: [172.29.216.15] => (item=/etc/flannel)
+skipping: [172.29.216.25] => (item=/etc/flannel)
+skipping: [172.29.216.26] => (item=/etc/flannel)
+skipping: [172.29.216.24] => (item=/etc/flannel)
+skipping: [172.29.216.27] => (item=/etc/flannel)
+skipping: [172.29.216.32] => (item=/etc/flannel)
+skipping: [172.29.216.33] => (item=/etc/flannel)
+skipping: [172.29.216.34] => (item=/etc/flannel)
+skipping: [172.29.216.37] => (item=/etc/flannel)
+skipping: [172.29.216.38] => (item=/etc/flannel)
+skipping: [172.29.216.45] => (item=/etc/flannel)
+skipping: [172.29.216.52] => (item=/etc/flannel)
+skipping: [172.29.216.53] => (item=/etc/flannel)
+skipping: [172.29.216.51] => (item=/etc/flannel)
+skipping: [172.29.216.54] => (item=/etc/flannel)
+skipping: [172.29.216.50] => (item=/etc/flannel)
+skipping: [172.29.216.55] => (item=/etc/flannel)
+skipping: [172.29.216.49] => (item=/etc/flannel)
+skipping: [172.29.216.56] => (item=/etc/flannel)
+skipping: [172.29.216.48] => (item=/etc/flannel)
+skipping: [172.29.216.57] => (item=/etc/flannel)
+skipping: [172.29.216.58] => (item=/etc/flannel)
+skipping: [172.29.216.59] => (item=/etc/flannel)
+skipping: [172.29.216.47] => (item=/etc/flannel)
+skipping: [172.29.216.46] => (item=/etc/flannel)
+skipping: [172.29.216.44] => (item=/etc/flannel)
+skipping: [172.29.216.43] => (item=/etc/flannel)
+skipping: [172.29.216.42] => (item=/etc/flannel)
+skipping: [172.29.216.41] => (item=/etc/flannel)
+skipping: [172.29.216.40] => (item=/etc/flannel)
+skipping: [172.29.216.39] => (item=/etc/flannel)
+skipping: [172.29.216.36] => (item=/etc/flannel)
+skipping: [172.29.216.35] => (item=/etc/flannel)
+skipping: [172.29.216.31] => (item=/etc/flannel)
+skipping: [172.29.216.30] => (item=/etc/flannel)
+skipping: [172.29.216.29] => (item=/etc/flannel)
+skipping: [172.29.216.28] => (item=/etc/flannel)
+skipping: [172.29.216.23] => (item=/etc/flannel)
+skipping: [172.29.216.22] => (item=/etc/flannel)
+skipping: [172.29.216.21] => (item=/etc/flannel)
+skipping: [172.29.216.60] => (item=/etc/flannel)
+skipping: [172.29.216.20] => (item=/etc/flannel)
+skipping: [172.29.216.19] => (item=/etc/flannel)
+skipping: [172.29.216.18] => (item=/etc/flannel)
+skipping: [172.29.216.17] => (item=/etc/flannel)
+skipping: [172.29.216.16] => (item=/etc/flannel)
+skipping: [172.29.216.12] => (item=/etc/flannel)
+skipping: [172.29.216.11] => (item=/etc/flannel)
+skipping: [172.29.216.10] => (item=/etc/flannel)
+skipping: [172.29.216.9] => (item=/etc/flannel)
+skipping: [172.29.216.8] => (item=/etc/flannel)
+skipping: [172.29.216.7] => (item=/etc/flannel)
+skipping: [172.29.216.6] => (item=/etc/flannel)
+skipping: [172.29.216.5] => (item=/etc/flannel)
+skipping: [172.29.216.4] => (item=/etc/flannel)
+skipping: [172.29.216.3] => (item=/etc/flannel)
+skipping: [172.29.216.2] => (item=/etc/flannel)
+skipping: [172.29.216.1] => (item=/etc/flannel)
+skipping: [9.21.53.15] => (item=/etc/flannel)
+
+TASK [Checking if Installer runs on cluster nodes] *******************************************************************************************************************************************************
+Monday 05 June 2017  03:12:34 +0000 (0:00:00.394)       0:03:54.093 ***********
+changed: [172.29.216.4]
+changed: [172.29.216.3]
+changed: [172.29.216.2]
+changed: [172.29.216.5]
+changed: [172.29.216.1]
+changed: [172.29.216.6]
+changed: [172.29.216.9]
+changed: [172.29.216.10]
+changed: [172.29.216.7]
+changed: [172.29.216.8]
+changed: [172.29.216.12]
+changed: [172.29.216.11]
+changed: [172.29.216.13]
+changed: [172.29.216.14]
+changed: [172.29.216.15]
+changed: [172.29.216.16]
+changed: [172.29.216.17]
+changed: [172.29.216.18]
+changed: [172.29.216.19]
+changed: [172.29.216.20]
+changed: [172.29.216.22]
+changed: [172.29.216.21]
+changed: [172.29.216.23]
+changed: [172.29.216.24]
+changed: [172.29.216.25]
+changed: [172.29.216.26]
+changed: [172.29.216.28]
+changed: [172.29.216.27]
+changed: [172.29.216.29]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.34]
+changed: [172.29.216.33]
+changed: [172.29.216.32]
+changed: [172.29.216.35]
+changed: [172.29.216.36]
+changed: [172.29.216.37]
+changed: [172.29.216.38]
+changed: [172.29.216.39]
+changed: [172.29.216.40]
+changed: [172.29.216.41]
+changed: [172.29.216.43]
+changed: [172.29.216.42]
+changed: [172.29.216.44]
+changed: [172.29.216.45]
+changed: [172.29.216.46]
+changed: [172.29.216.49]
+changed: [172.29.216.47]
+changed: [172.29.216.48]
+changed: [172.29.216.50]
+changed: [172.29.216.51]
+changed: [172.29.216.52]
+changed: [172.29.216.53]
+changed: [172.29.216.54]
+changed: [172.29.216.55]
+changed: [172.29.216.56]
+changed: [172.29.216.59]
+changed: [172.29.216.57]
+changed: [172.29.216.58]
+changed: [172.29.216.60]
+changed: [9.21.53.15]
+
+TASK [Restarting Docker engine on cluster nodes] *********************************************************************************************************************************************************
+Monday 05 June 2017  03:12:45 +0000 (0:00:11.026)       0:04:05.120 ***********
+changed: [172.29.216.2]
+changed: [172.29.216.4]
+changed: [172.29.216.3]
+changed: [172.29.216.5]
+changed: [172.29.216.1]
+changed: [172.29.216.6]
+changed: [172.29.216.8]
+changed: [172.29.216.9]
+changed: [172.29.216.7]
+changed: [172.29.216.10]
+changed: [172.29.216.11]
+changed: [172.29.216.12]
+changed: [172.29.216.13]
+changed: [172.29.216.14]
+changed: [172.29.216.15]
+changed: [172.29.216.16]
+changed: [172.29.216.17]
+changed: [172.29.216.18]
+changed: [172.29.216.19]
+changed: [172.29.216.20]
+changed: [172.29.216.21]
+changed: [172.29.216.22]
+changed: [172.29.216.24]
+changed: [172.29.216.23]
+changed: [172.29.216.25]
+changed: [172.29.216.26]
+changed: [172.29.216.27]
+changed: [172.29.216.29]
+changed: [172.29.216.28]
+changed: [172.29.216.30]
+changed: [172.29.216.31]
+changed: [172.29.216.32]
+changed: [172.29.216.33]
+changed: [172.29.216.34]
+changed: [172.29.216.35]
+changed: [172.29.216.36]
+changed: [172.29.216.37]
+changed: [172.29.216.38]
+changed: [172.29.216.40]
+changed: [172.29.216.39]
+changed: [172.29.216.41]
+changed: [172.29.216.42]
+changed: [172.29.216.43]
+changed: [172.29.216.44]
+changed: [172.29.216.45]
+changed: [172.29.216.46]
+changed: [172.29.216.47]
+changed: [172.29.216.48]
+changed: [172.29.216.49]
+changed: [172.29.216.50]
+changed: [172.29.216.51]
+changed: [172.29.216.52]
+changed: [172.29.216.53]
+changed: [172.29.216.55]
+changed: [172.29.216.54]
+changed: [172.29.216.56]
+skipping: [9.21.53.15]
+changed: [172.29.216.57]
+changed: [172.29.216.58]
+changed: [172.29.216.59]
+changed: [172.29.216.60]
+
+TASK [Cleaning up docker configurations on installer node if needed] *************************************************************************************************************************************
+Monday 05 June 2017  03:13:35 +0000 (0:00:49.718)       0:04:54.839 ***********
+skipping: [172.29.216.1]
+skipping: [172.29.216.2]
+skipping: [172.29.216.4]
+skipping: [172.29.216.3]
+skipping: [172.29.216.5]
+skipping: [172.29.216.6]
+skipping: [172.29.216.7]
+skipping: [172.29.216.8]
+skipping: [172.29.216.9]
+skipping: [172.29.216.10]
+skipping: [172.29.216.11]
+skipping: [172.29.216.12]
+skipping: [172.29.216.13]
+skipping: [172.29.216.14]
+skipping: [172.29.216.16]
+skipping: [172.29.216.15]
+skipping: [172.29.216.17]
+skipping: [172.29.216.19]
+skipping: [172.29.216.20]
+skipping: [172.29.216.18]
+skipping: [172.29.216.21]
+skipping: [172.29.216.22]
+skipping: [172.29.216.23]
+skipping: [172.29.216.24]
+skipping: [172.29.216.25]
+skipping: [172.29.216.26]
+skipping: [172.29.216.27]
+skipping: [172.29.216.28]
+skipping: [172.29.216.29]
+skipping: [172.29.216.30]
+skipping: [172.29.216.31]
+skipping: [172.29.216.33]
+skipping: [172.29.216.34]
+skipping: [172.29.216.32]
+skipping: [172.29.216.35]
+skipping: [172.29.216.37]
+skipping: [172.29.216.36]
+skipping: [172.29.216.38]
+skipping: [172.29.216.39]
+skipping: [172.29.216.40]
+skipping: [172.29.216.41]
+skipping: [172.29.216.42]
+skipping: [172.29.216.43]
+skipping: [172.29.216.44]
+skipping: [172.29.216.45]
+skipping: [172.29.216.46]
+skipping: [172.29.216.47]
+skipping: [172.29.216.48]
+skipping: [172.29.216.50]
+skipping: [172.29.216.51]
+skipping: [172.29.216.49]
+skipping: [172.29.216.52]
+skipping: [172.29.216.54]
+skipping: [172.29.216.53]
+skipping: [172.29.216.55]
+skipping: [172.29.216.56]
+skipping: [172.29.216.57]
+skipping: [172.29.216.58]
+skipping: [172.29.216.59]
+skipping: [172.29.216.60]
+changed: [9.21.53.15]
+
+PLAY RECAP ***********************************************************************************************************************************************************************************************
+172.29.216.1               : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.10              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.11              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.12              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.13              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.14              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.15              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.16              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.17              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.18              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.19              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.2               : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.20              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.21              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.22              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.23              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.24              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.25              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.26              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.27              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.28              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.29              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.3               : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.30              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.31              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.32              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.33              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.34              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.35              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.36              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.37              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.38              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.39              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.4               : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.40              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.41              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.42              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.43              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.44              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.45              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.46              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.47              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.48              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.49              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.5               : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.50              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.51              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.52              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.53              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.54              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.55              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.56              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.57              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.58              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.59              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.6               : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.60              : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.7               : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.8               : ok=16   changed=11   unreachable=0    failed=0
+172.29.216.9               : ok=16   changed=11   unreachable=0    failed=0
+9.21.53.15                 : ok=16   changed=11   unreachable=0    failed=0
+
+Monday 05 June 2017  03:13:36 +0000 (0:00:01.208)       0:04:56.048 ***********
+===============================================================================
+Removing k8s files ---------------------------------------------------- 113.97s
+Restarting Docker engine on cluster nodes ------------------------------ 49.72s
+Removing all other containers ------------------------------------------ 19.53s
+Removing Kubelet container --------------------------------------------- 17.06s
+Gathering Facts -------------------------------------------------------- 14.38s
+Removing Flannel/Calico container -------------------------------------- 11.25s
+Removing lock file ----------------------------------------------------- 11.25s
+Removing Docker volumes ------------------------------------------------ 11.08s
+Checking if Installer runs on cluster nodes ---------------------------- 11.03s
+Flushing iptables ------------------------------------------------------ 10.88s
+Unmounting k8s volumes ------------------------------------------------- 10.83s
+Cleaning up /etc/hosts ------------------------------------------------- 10.77s
+Cleaning up docker configurations on installer node if needed ----------- 1.21s
+Getting proxy nodes ----------------------------------------------------- 0.40s
+Getting Number of Master nodes ------------------------------------------ 0.40s
+Removing flannel config ------------------------------------------------- 0.39s
+Getting Number of Proxy nodes ------------------------------------------- 0.39s
+Getting master nodes ---------------------------------------------------- 0.39s
+Cleaning up proxy vip --------------------------------------------------- 0.37s
+Disabling Kubelet service ----------------------------------------------- 0.36s
+Playbook run took 0 days, 0 hours, 4 minutes, 56 seconds
+
+[root@ib17b05 ~]#
