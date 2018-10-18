@@ -1,0 +1,8 @@
+---
+- name: cp docker proxy 
+  hosts: all
+  vars:
+    src_path: "/etc/systemd/system/docker.service.d/http-proxy.conf"
+    des_path: "/etc/systemd/system/docker.service.d/"
+  tasks: 
+    - shell: 'cp -r {{ src_path }} {{ des_path }}'

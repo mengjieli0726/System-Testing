@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: perf-advisor
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: perf-advisor
+    spec:
+      containers:
+      - name: perf-advisor
+        image: registry.ibm.com/library/advisor-ppc64le
+        ports:
+        - containerPort: 4200
+      #nodeSelector:
+        #beta.kubernetes.io/arch: ppc64le

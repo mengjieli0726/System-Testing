@@ -1,0 +1,10 @@
+---
+- name: add FADN into hosts 
+  hosts: other
+  gather_facts: false
+  tasks:
+    - name: add FADN into hosts
+      shell: echo "172.29.215.151 icp-master-ligc.sl.cloud9.ibm.com"  >> /etc/hosts
+
+    - name: check /etc/hosts file
+      shell: tail -n 5 /etc/hosts

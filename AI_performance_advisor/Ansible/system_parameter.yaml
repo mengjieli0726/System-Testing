@@ -1,0 +1,20 @@
+---
+- name: update system parameter
+  hosts: other
+  gather_facts: false
+  tasks:
+  - name: update open file 
+    blockinfile: 
+      dest: /etc/security/limits.conf
+      block: | 
+        * soft nofile 1048576
+        * hard nofile 1048576
+        * soft nproc 1048576
+        * hard nproc 1048576
+        root soft nofile 1048576
+        root hard nofile 1048576
+        root soft nproc 1048576
+        root hard nproc 1048576
+      backup: yes
+  - name: Check update resutl
+    shell: tail -n 10 /etc/security/limits.conf

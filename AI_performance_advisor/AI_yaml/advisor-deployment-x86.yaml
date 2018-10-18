@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: perf-advisor
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: perf-advisor
+    spec:
+      containers:
+      - name: perf-advisor
+        image: ligc.sl.cloud9.ibm.com/library/advisor-x86
+        ports:
+        - containerPort: 4200
+      #nodeSelector:
+        #beta.kubernetes.io/arch: amd64
+

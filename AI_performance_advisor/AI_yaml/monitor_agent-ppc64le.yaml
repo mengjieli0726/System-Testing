@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: monitor-agent
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: monitor-agent
+    spec:
+      hostNetwork: true
+      containers:
+      - name: monitor-agent
+        image: ligc.sl.cloud9.ibm.com/library/monitor_agent-ppc64le
+        ports:
+        - containerPort: 8800
+          #hostPort: 38801
+        securityContext:
+          privileged: true
+      nodeSelector:
+        beta.kubernetes.io/arch: ppc64le
+
+

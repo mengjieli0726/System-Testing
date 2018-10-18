@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: config-agent
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: config-agent
+  template:
+    metadata:
+      labels:
+        app: config-agent
+    spec:
+      hostNetwork: true
+      containers:
+      - name: config-agent
+        image: ligc.sl.cloud9.ibm.com/library/config_agent-x86
+        ports:
+        - containerPort: 8801
+          #hostPort: 38801
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /var/run/docker.sock
+          name: docker-sock
+      volumes:
+      - name: docker-sock
+        hostPath:
+          path: /var/run/docker.sock
+          type: File
+      nodeSelector:
+        beta.kubernetes.io/arch: amd64
+        proxy: "true"
+      tolerations:
+      - effect: NoSchedule
+        key: dedicated
+        operator: Exists
+      - key: CriticalAddonsOnly
+        operator: Exists
+

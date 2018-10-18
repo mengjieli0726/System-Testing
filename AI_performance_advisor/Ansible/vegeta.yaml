@@ -1,0 +1,15 @@
+---
+- name: cp vegeta client  
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: cp vegeta file
+      copy:
+        src="/usr/local/bin/vegeta"
+        dest="/usr/local/bin/"
+        owner=root
+        group=root
+        mode=u+rx,g+x,o+x 
+
+    - name: check vegeta command
+      shell: vegeta -version
