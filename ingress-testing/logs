@@ -1,0 +1,616 @@
+I0131 02:14:11.263784       7 main.go:227] Creating API client for https://10.0.0.1:443
+I0131 02:14:11.269678       7 main.go:239] Running in Kubernetes Cluster version v1.9 (v1.9.1+icp-ee) - git (clean) commit d524bd6840802f227c0e45ed1da3c3fa5a42b780 - platform linux/amd64
+I0131 02:14:11.271833       7 main.go:83] validated kube-system/default-http-backend as the default backend
+I0131 02:14:11.531897       7 ssl.go:58] Creating temp file /ingress-controller/ssl/default-fake-certificate.pem740051576 for Keypair: default-fake-certificate.pem
+I0131 02:14:11.532812       7 ssl.go:116] parsing ssl certificate extensions
+I0131 02:14:11.533045       7 dns.go:56] nameservers IP address/es to use: [9.21.48.113 9.21.48.114 9.111.248.111]
+I0131 02:14:11.534253       7 stat_collector.go:77] starting new nginx stats collector for Ingress controller running in namespace  (class nginx)
+I0131 02:14:11.534278       7 stat_collector.go:78] collector extracting information from port 18080
+I0131 02:14:11.544755       7 main.go:169] starting TLS proxy for SSL passthrough
+I0131 02:14:11.544837       7 nginx.go:248] starting Ingress controller
+I0131 02:14:11.545165       7 reflector.go:202] Starting reflector *v1.Endpoints (10m0s) from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:46
+I0131 02:14:11.545188       7 reflector.go:202] Starting reflector *v1.ConfigMap (10m0s) from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:49
+I0131 02:14:11.545198       7 reflector.go:240] Listing and watching *v1.Endpoints from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:46
+I0131 02:14:11.545286       7 reflector.go:202] Starting reflector *v1beta1.Ingress (10m0s) from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:45
+I0131 02:14:11.545296       7 reflector.go:240] Listing and watching *v1beta1.Ingress from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:45
+I0131 02:14:11.545188       7 reflector.go:202] Starting reflector *v1.Secret (10m0s) from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:48
+I0131 02:14:11.545396       7 reflector.go:240] Listing and watching *v1.Secret from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:48
+I0131 02:14:11.545441       7 reflector.go:202] Starting reflector *v1.Service (10m0s) from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:47
+I0131 02:14:11.545210       7 reflector.go:240] Listing and watching *v1.ConfigMap from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:49
+I0131 02:14:11.545463       7 reflector.go:240] Listing and watching *v1.Service from k8s.io/ingress-nginx/internal/ingress/controller/listers.go:47
+I0131 02:14:11.546538       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:14:11.546548       7 controller.go:1222] updating annotations information for ingress default/my-nginx
+I0131 02:14:11.546725       7 main.go:109] No default affinity was found for Ingress my-nginx
+I0131 02:14:11.552571       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:iam-token-service,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/iam-token-service,UID:2807e9d4-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2167,Generation:0,CreationTimestamp:2018-01-30 22:58:59 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: auth-apikeys,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.197  0xc42025c8f0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:auth-apikeys-wxf6v,UID:27fa29a0-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:2023,FieldPath:,}}] [] [{p10443 10443 TCP}]}],}
+I0131 02:14:11.553052       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:monitoring-prometheus-nodeexporter,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/monitoring-prometheus-nodeexporter,UID:7af25ca6-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1986,Generation:0,CreationTimestamp:2018-01-30 23:01:18 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: monitoring-prometheus,component: nodeexporter,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{9.111.255.179  0xc42025c900 ObjectReference{Kind:Pod,Namespace:kube-system,Name:monitoring-prometheus-nodeexporter-amd64-njr5r,UID:7ab63b94-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1827,FieldPath:,}} {9.111.255.72  0xc42025c910 &ObjectReference{Kind:Pod,Namespace:kube-system,Name:monitoring-prometheus-nodeexporter-amd64-nfwzd,UID:7abb6685-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1985,FieldPath:,}}] [] [{metrics 9100 TCP}]}],}
+I0131 02:14:11.553340       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:platform-identity-provider,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/platform-identity-provider,UID:010532d9-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:803,Generation:0,CreationTimestamp:2018-01-30 22:57:53 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: auth-idp,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.196  0xc42025c930 ObjectReference{Kind:Pod,Namespace:kube-system,Name:auth-idp-w4bhc,UID:00ec14f4-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:801,FieldPath:,}}] [] [{p4300 4300 TCP} {p9443 9443 TCP}]}],}
+I0131 02:14:11.553695       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:platform-ui,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/platform-ui,UID:2f843ce2-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1014,Generation:0,CreationTimestamp:2018-01-30 22:59:11 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{kubernetes.io/cluster-service: true,kubernetes.io/name: platform-ui,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{9.111.255.72  0xc42025c940 ObjectReference{Kind:Pod,Namespace:kube-system,Name:platform-ui-wqsh4,UID:2f613cee-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1013,FieldPath:,}}] [] [{platform-ui 3000 TCP}]}],}
+I0131 02:14:11.553766       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:platform-identity-management,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/platform-identity-management,UID:010a75b6-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:804,Generation:0,CreationTimestamp:2018-01-30 22:57:53 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: auth-idp,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.196  0xc42025c950 ObjectReference{Kind:Pod,Namespace:kube-system,Name:auth-idp-w4bhc,UID:00ec14f4-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:801,FieldPath:,}}] [] [{p4500 4500 TCP}]}],}
+I0131 02:14:11.553807       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:default-http-backend,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/default-http-backend,UID:3f0099bb-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1377,Generation:0,CreationTimestamp:2018-01-30 22:59:37 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.206  0xc42025c960 ObjectReference{Kind:Pod,Namespace:kube-system,Name:default-http-backend-697dd7479d-hhrnt,UID:3f2a7175-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1372,FieldPath:,}}] [] [{ 8080 TCP}]}],}
+I0131 02:14:11.553737       7 queue.go:70] queuing item &Ingress{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:my-nginx,GenerateName:,Namespace:default,SelfLink:/apis/extensions/v1beta1/namespaces/default/ingresses/my-nginx,UID:ca6724d6-062a-11e8-8e97-fa163ed2f375,ResourceVersion:8335,Generation:1,CreationTimestamp:2018-01-31 02:02:28 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{},Annotations:map[string]string{nginx.ingress.kubernetes.io/ssl-passthrough: true,},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Spec:IngressSpec{Backend:nil,TLS:[],Rules:[{ubuhq1.eng.platformlab.ibm.com {HTTPIngressRuleValue{Paths:[{ {my-nginx {0 80 }}}],}}}],},Status:IngressStatus{LoadBalancer:k8s_io_api_core_v1.LoadBalancerStatus{Ingress:[],},},}
+I0131 02:14:11.553851       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:helm-api,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/helm-api,UID:81a6b079-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2242,Generation:0,CreationTimestamp:2018-01-30 23:01:29 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: helm-api,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.219  0xc42025c970 ObjectReference{Kind:Pod,Namespace:kube-system,Name:helm-api-76b7fcbb67-kv8tm,UID:8159267c-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:2240,FieldPath:,}}] [] [{helmapiport 3000 TCP}]}],}
+I0131 02:14:11.553900       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:image-manager,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/image-manager,UID:3d6e24bd-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1354,Generation:0,CreationTimestamp:2018-01-30 22:59:34 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{kubernetes.io/cluster-service: true,kubernetes.io/name: image-manager,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{9.111.255.72 image-manager-0 0xc42025c980 ObjectReference{Kind:Pod,Namespace:kube-system,Name:image-manager-0,UID:3d8fca9a-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1353,FieldPath:,}}] [] [{registry 8500 TCP} {image-manager 8600 TCP}]}],}
+I0131 02:14:11.553966       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:monitoring-exporter,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/monitoring-exporter,UID:7a3078f0-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1982,Generation:0,CreationTimestamp:2018-01-30 23:01:16 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: monitoring-exporter,component: collectdexporter,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.213  0xc42025c990 ObjectReference{Kind:Pod,Namespace:kube-system,Name:monitoring-exporter-6bf7755d59-s4kjv,UID:7a191d46-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1981,FieldPath:,}}] [] [{collector 25826 UDP} {metrics 9103 TCP}]}],}
+I0131 02:14:11.554021       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:unified-router,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/unified-router,UID:44a68070-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2166,Generation:0,CreationTimestamp:2018-01-30 22:59:47 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{k8s-app: unified-router,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.207  0xc42025c9a0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:unified-router-v2976,UID:4413e89c-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1486,FieldPath:,}}] [] [{ 9090 TCP}]}],}
+I0131 02:14:11.554076       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:elasticsearch-data,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/elasticsearch-data,UID:38308521-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1305,Generation:0,CreationTimestamp:2018-01-30 22:59:26 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: elasticsearch,component: elasticsearch,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.203 elasticsearch-data-0 0xc42025c9b0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:elasticsearch-data-0,UID:3862439b-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1303,FieldPath:,}}] [] [{data 9300 TCP}]}],}
+I0131 02:14:11.554139       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:heapster,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/heapster,UID:40e44e1b-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1483,Generation:0,CreationTimestamp:2018-01-30 22:59:40 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{kubernetes.io/cluster-service: true,kubernetes.io/name: Heapster,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{9.111.255.72  0xc42025c9c0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:heapster-84b7cbb767-5dqwr,UID:40f9a197-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1481,FieldPath:,}}] [] [{ 8082 TCP}]}],}
+I0131 02:14:11.554201       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:helmrepo,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/helmrepo,UID:820733ad-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2046,Generation:0,CreationTimestamp:2018-01-30 23:01:30 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: helmrepo,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.220  0xc42025c9d0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:helmrepo-6c98d8c6d7-99nzh,UID:81c75529-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:2044,FieldPath:,}}] [] [{helmrepoport 3001 TCP}]}],}
+I0131 02:14:11.554254       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:iam-pdp,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/iam-pdp,UID:285f2595-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:924,Generation:0,CreationTimestamp:2018-01-30 22:58:59 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: auth-pdp,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.199  0xc42025c9e0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:auth-pdp-9pxhn,UID:282fdae2-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:922,FieldPath:,}}] [] [{p7998 7998 TCP}]}],}
+I0131 02:14:11.554311       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:kubernetes,GenerateName:,Namespace:default,SelfLink:/api/v1/namespaces/default/endpoints/kubernetes,UID:7b139616-0610-11e8-b8d9-fa163ed2f375,ResourceVersion:7,Generation:0,CreationTimestamp:2018-01-30 22:54:08 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{9.111.255.72  <nil> nil}] [] [{https 8001 TCP}]}],}
+I0131 02:14:11.554368       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:kube-dns,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/kube-dns,UID:9f7d0622-0610-11e8-b8d9-fa163ed2f375,ResourceVersion:831,Generation:0,CreationTimestamp:2018-01-30 22:55:09 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{k8s-app: kube-dns,kubernetes.io/cluster-service: true,kubernetes.io/name: KubeDNS,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.193  0xc42025c9f0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:kube-dns-amd64-5j2gm,UID:9f855eae-0610-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:456,FieldPath:,}}] [] [{dns 53 UDP} {dns-tcp 53 TCP}]}],}
+I0131 02:14:11.554418       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:monitoring-grafana,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/monitoring-grafana,UID:7a71cac4-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2009,Generation:0,CreationTimestamp:2018-01-30 23:01:17 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: monitoring-grafana,component: grafana,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.216  0xc42025ca00 ObjectReference{Kind:Pod,Namespace:kube-system,Name:monitoring-grafana-76b567bbb-rrchs,UID:7a52df19-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:2008,FieldPath:,}}] [] [{web 8443 TCP}]}],}
+I0131 02:14:11.554462       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:tiller-deploy,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/tiller-deploy,UID:32cf5eff-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1065,Generation:0,CreationTimestamp:2018-01-30 22:59:17 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: helm,name: tiller,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.200  0xc42025ca10 ObjectReference{Kind:Pod,Namespace:kube-system,Name:tiller-deploy-554ccfb55b-5p2dq,UID:32f1cb75-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1063,FieldPath:,}}] [] [{grpc 44134 TCP}]}],}
+I0131 02:14:11.554516       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:ds-hs,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/ds-hs,UID:a2d6468a-0610-11e8-b8d9-fa163ed2f375,ResourceVersion:638,Generation:0,CreationTimestamp:2018-01-30 22:55:15 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: icp-ds,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.194 icp-ds-0 0xc42025ca20 ObjectReference{Kind:Pod,Namespace:kube-system,Name:icp-ds-0,UID:a32ef558-0610-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:635,FieldPath:,}}] [] [{p6984 6984 TCP} {p5984 5984 TCP} {p9000 9000 TCP} {p4369 4369 TCP}]}],}
+I0131 02:14:11.554574       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:logstash,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/logstash,UID:3a20c941-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1198,Generation:0,CreationTimestamp:2018-01-30 22:59:29 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: logstash,component: logstash,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.205  0xc42025ca30 ObjectReference{Kind:Pod,Namespace:kube-system,Name:logstash-7df4666749-g85lg,UID:39bcbf70-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1196,FieldPath:,}}] [] [{beats 5044 TCP}]}],}
+I0131 02:14:11.554626       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:metering-server,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/metering-server,UID:4793d2ea-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1594,Generation:0,CreationTimestamp:2018-01-30 22:59:51 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: metering-server,component: meteringsvc,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.211  0xc42025ca40 ObjectReference{Kind:Pod,Namespace:kube-system,Name:metering-server-658455bdd9-s5d5l,UID:47a78c07-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1592,FieldPath:,}}] [] [{apiserver 9443 TCP}]}],}
+I0131 02:14:11.554669       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:monitoring-prometheus-alertmanager,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/monitoring-prometheus-alertmanager,UID:7a1654f9-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2000,Generation:0,CreationTimestamp:2018-01-30 23:01:16 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: monitoring-prometheus,component: alertmanager,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.218  0xc42025ca50 ObjectReference{Kind:Pod,Namespace:kube-system,Name:monitoring-prometheus-alertmanager-7d46d76d85-qr5qr,UID:79f1f11f-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1998,FieldPath:,}}] [] [{web 8443 TCP}]}],}
+I0131 02:14:11.554727       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:monitoring-prometheus-kubestatemetrics,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/monitoring-prometheus-kubestatemetrics,UID:7a9e53db-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2006,Generation:0,CreationTimestamp:2018-01-30 23:01:17 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: monitoring-prometheus,component: kubestatemetrics,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.215  0xc42025ca60 ObjectReference{Kind:Pod,Namespace:kube-system,Name:monitoring-prometheus-kubestatemetrics-6d458c65c5-wxcrh,UID:7a871c21-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:2004,FieldPath:,}}] [] [{http 8080 TCP}]}],}
+I0131 02:14:11.554778       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:elasticsearch,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/elasticsearch,UID:38e5a50a-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1317,Generation:0,CreationTimestamp:2018-01-30 22:59:27 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: elasticsearch,component: elasticsearch,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.201  0xc42025ca70 ObjectReference{Kind:Pod,Namespace:kube-system,Name:elasticsearch-client-59655468dc-bzrvb,UID:37fab5eb-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1312,FieldPath:,}}] [] [{http 9200 TCP}]}],}
+I0131 02:14:11.554836       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:elasticsearch-discovery,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/elasticsearch-discovery,UID:3881c905-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1301,Generation:0,CreationTimestamp:2018-01-30 22:59:26 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: elasticsearch,component: elasticsearch,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.202  0xc42025ca80 ObjectReference{Kind:Pod,Namespace:kube-system,Name:elasticsearch-master-7d9786ccc6-vx8sq,UID:38d6d9e1-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1299,FieldPath:,}}] [] [{transport 9300 TCP}]}],}
+I0131 02:14:11.554886       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:kube-scheduler,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/kube-scheduler,UID:7d6eb661-0610-11e8-b8d9-fa163ed2f375,ResourceVersion:8382,Generation:0,CreationTimestamp:2018-01-30 22:54:12 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{},Annotations:map[string]string{control-plane.alpha.kubernetes.io/leader: {"holderIdentity":"ubuhq1","leaseDurationSeconds":15,"acquireTime":"2018-01-30T22:54:12Z","renewTime":"2018-01-31T02:14:09Z","leaderTransitions":0},},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[],}
+I0131 02:14:11.554933       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:metering-ui,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/metering-ui,UID:47efd029-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2093,Generation:0,CreationTimestamp:2018-01-30 22:59:52 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: metering-ui,component: meteringsvc,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.209  0xc42025ca90 ObjectReference{Kind:Pod,Namespace:kube-system,Name:metering-ui-7494d794b8-5878r,UID:482fc1af-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:2092,FieldPath:,}}] [] [{dashboard 3130 TCP}]}],}
+I0131 02:14:11.554989       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:platform-auth-service,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/platform-auth-service,UID:00fe372b-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:806,Generation:0,CreationTimestamp:2018-01-30 22:57:53 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: auth-idp,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.196  0xc42025caa0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:auth-idp-w4bhc,UID:00ec14f4-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:801,FieldPath:,}}] [] [{p3100 3100 TCP} {p9443 9443 TCP}]}],}
+I0131 02:14:11.555043       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:catalog-ui,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/catalog-ui,UID:31d6966b-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2169,Generation:0,CreationTimestamp:2018-01-30 22:59:15 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{kubernetes.io/cluster-service: true,kubernetes.io/name: catalog-ui,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{9.111.255.72  0xc42025cab0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:catalog-ui-f6kvz,UID:317c7416-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1006,FieldPath:,}}] [] [{catalog-ui 4000 TCP}]}],}
+I0131 02:14:11.555097       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:cloudantdb,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/cloudantdb,UID:a2d91196-0610-11e8-b8d9-fa163ed2f375,ResourceVersion:636,Generation:0,CreationTimestamp:2018-01-30 22:55:15 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: icp-ds,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.194  0xc42025cac0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:icp-ds-0,UID:a32ef558-0610-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:635,FieldPath:,}}] [] [{p6984 6984 TCP} {p5984 5984 TCP} {p9000 9000 TCP} {p4369 4369 TCP}]}],}
+I0131 02:14:11.555151       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:iam-pap,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/iam-pap,UID:2825ede8-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:2168,Generation:0,CreationTimestamp:2018-01-30 22:58:59 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: auth-pap,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.198  0xc42025cad0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:auth-pap-2txm8,UID:280f9f96-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:2029,FieldPath:,}}] [] [{p39001 39001 TCP}]}],}
+I0131 02:14:11.555205       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:metering-dm,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/metering-dm,UID:465a563b-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1547,Generation:0,CreationTimestamp:2018-01-30 22:59:49 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: metering-dm,component: meteringsvc,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.208  0xc42025cae0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:metering-dm-85d648864d-86lk2,UID:46ea8b8d-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1544,FieldPath:,}}] [] [{datamanager 3000 TCP}]}],}
+I0131 02:14:11.555256       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:catalog-catalog-apiserver,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/catalog-catalog-apiserver,UID:4e331323-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:3364,Generation:0,CreationTimestamp:2018-01-30 23:00:03 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: catalog-catalog-apiserver,release: catalog,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{9.111.255.72  0xc42025caf0 ObjectReference{Kind:Pod,Namespace:kube-system,Name:catalog-catalog-apiserver-fzt9n,UID:4dd6a359-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:3339,FieldPath:,}}] [] [{secure 28443 TCP}]}],}
+I0131 02:14:11.555321       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:kube-controller-manager,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/kube-controller-manager,UID:7d95e3fc-0610-11e8-b8d9-fa163ed2f375,ResourceVersion:8388,Generation:0,CreationTimestamp:2018-01-30 22:54:13 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{},Annotations:map[string]string{control-plane.alpha.kubernetes.io/leader: {"holderIdentity":"ubuhq1","leaseDurationSeconds":15,"acquireTime":"2018-01-30T22:54:13Z","renewTime":"2018-01-31T02:14:10Z","leaderTransitions":0},},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[],}
+I0131 02:14:11.554809       7 event.go:218] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"default", Name:"my-nginx", UID:"ca6724d6-062a-11e8-8e97-fa163ed2f375", APIVersion:"extensions", ResourceVersion:"8335", FieldPath:""}): type: 'Normal' reason: 'CREATE' Ingress default/my-nginx
+I0131 02:14:11.555362       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:monitoring-prometheus,GenerateName:,Namespace:kube-system,SelfLink:/api/v1/namespaces/kube-system/endpoints/monitoring-prometheus,UID:7c1070a7-0611-11e8-b8d9-fa163ed2f375,ResourceVersion:1989,Generation:0,CreationTimestamp:2018-01-30 23:01:20 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{app: monitoring-prometheus,component: prometheus,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.254.217  0xc42025cb00 ObjectReference{Kind:Pod,Namespace:kube-system,Name:monitoring-prometheus-54b6467f6-5krf7,UID:7be2fe67-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1988,FieldPath:,}}] [] [{http 8443 TCP}]}],}
+I0131 02:14:11.555415       7 queue.go:70] queuing item &Endpoints{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:my-nginx,GenerateName:,Namespace:default,SelfLink:/api/v1/namespaces/default/endpoints/my-nginx,UID:ba572b5c-0629-11e8-8e97-fa163ed2f375,ResourceVersion:6767,Generation:0,CreationTimestamp:2018-01-31 01:54:52 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{run: my-nginx,},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Subsets:[{[{10.1.85.70  0xc42025cb10 ObjectReference{Kind:Pod,Namespace:default,Name:my-nginx-7967bb46-6tk7s,UID:ba68ab3b-0629-11e8-8e97-fa163ed2f375,APIVersion:,ResourceVersion:6766,FieldPath:,}}] [] [{nginx 80 TCP}]}],}
+I0131 02:14:11.560997       7 listers.go:175] adding configmap kube-system/nginx-load-balancer-conf to backend
+I0131 02:14:11.561178       7 queue.go:70] queuing item &Ingress{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:,GenerateName:,Namespace:,SelfLink:,UID:,ResourceVersion:,Generation:0,CreationTimestamp:0001-01-01 00:00:00 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Spec:IngressSpec{Backend:nil,TLS:[],Rules:[],},Status:IngressStatus{LoadBalancer:k8s_io_api_core_v1.LoadBalancerStatus{Ingress:[],},},}
+I0131 02:14:11.645001       7 nginx.go:253] running initial sync of secrets
+I0131 02:14:11.645028       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:14:11.645050       7 nginx.go:286] starting NGINX process...
+I0131 02:14:11.645110       7 leaderelection.go:174] attempting to acquire leader lease...
+I0131 02:14:11.645124       7 queue.go:70] queuing item sync status
+I0131 02:14:11.645142       7 queue.go:111] syncing sync status
+I0131 02:14:11.645155       7 status.go:150] skipping Ingress status update (I am not the current leader)
+I0131 02:14:11.645238       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:14:11.645445       7 queue.go:70] queuing item &Ingress{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:,GenerateName:,Namespace:,SelfLink:,UID:,ResourceVersion:,Generation:0,CreationTimestamp:0001-01-01 00:00:00 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{},Annotations:map[string]string{},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Spec:IngressSpec{Backend:nil,TLS:[],Rules:[],},Status:IngressStatus{LoadBalancer:k8s_io_api_core_v1.LoadBalancerStatus{Ingress:[],},},}
+I0131 02:14:11.645508       7 queue.go:111] syncing kube-system/iam-token-service
+I0131 02:14:11.645521       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:14:11.645558       7 controller.go:1139] getting endpoints for service kube-system/default-http-backend and port &ServicePort{Name:,Protocol:TCP,Port:80,TargetPort:8080,NodePort:0,}
+I0131 02:14:11.645575       7 controller.go:1185] endpoints found: [{10.1.254.206 8080 0 0 &ObjectReference{Kind:Pod,Namespace:kube-system,Name:default-http-backend-697dd7479d-hhrnt,UID:3f2a7175-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1372,FieldPath:,}}]
+I0131 02:14:11.645600       7 controller.go:708] creating upstream default-my-nginx-80
+I0131 02:14:11.645609       7 controller.go:806] obtaining port information for service default/my-nginx
+I0131 02:14:11.645615       7 controller.go:1139] getting endpoints for service default/my-nginx and port &ServicePort{Name:nginx,Protocol:TCP,Port:80,TargetPort:80,NodePort:30122,}
+I0131 02:14:11.645627       7 controller.go:1185] endpoints found: [{10.1.85.70 80 0 0 &ObjectReference{Kind:Pod,Namespace:default,Name:my-nginx-7967bb46-6tk7s,UID:ba68ab3b-0629-11e8-8e97-fa163ed2f375,APIVersion:,ResourceVersion:6766,FieldPath:,}}]
+I0131 02:14:11.645662       7 controller.go:1030] ingress default/my-nginx for host ubuhq1.eng.platformlab.ibm.com does not contains a TLS section
+I0131 02:14:11.645672       7 controller.go:425] secret  does not contain 'ca.crt', mutual authentication not enabled - ingress rule default/my-nginx.
+I0131 02:14:11.645677       7 controller.go:456] replacing ingress rule default/my-nginx location / upstream default-my-nginx-80 (upstream-default-backend)
+I0131 02:14:11.645687       7 controller.go:231] obtaining information about stream services of type TCP located in configmap 
+I0131 02:14:11.645693       7 controller.go:231] obtaining information about stream services of type UDP located in configmap 
+I0131 02:14:11.645697       7 controller.go:211] backend reload required
+I0131 02:14:11.645834       7 stat_collector.go:34] changing prometheus collector from  to default
+I0131 02:14:11.645903       7 nginx.go:540] adjusting ServerNameHashBucketSize variable to 64
+I0131 02:14:11.645910       7 nginx.go:552] number of worker processes: 8
+I0131 02:14:11.645914       7 nginx.go:557] maximum number of open file descriptors : 1048576
+I0131 02:14:11.647241       7 template.go:91] NGINX configuration: {"ProxySetHeaders":{},"AddHeaders":{},"MaxOpenFiles":130048,"BacklogSize":32768,"Backends":[{"name":"upstream-default-backend","service":{"metadata":{"name":"default-http-backend","namespace":"kube-system","selfLink":"/api/v1/namespaces/kube-system/services/default-http-backend","uid":"3efa5901-0611-11e8-b8d9-fa163ed2f375","resourceVersion":"1244","creationTimestamp":"2018-01-30T22:59:37Z","annotations":{"kubectl.kubernetes.io/last-applied-configuration":"{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"name\":\"default-http-backend\",\"namespace\":\"kube-system\"},\"spec\":{\"ports\":[{\"port\":80,\"protocol\":\"TCP\",\"targetPort\":8080}],\"selector\":{\"app\":\"default-http-backend\"},\"type\":\"ClusterIP\"}}\n"}},"spec":{"ports":[{"protocol":"TCP","port":80,"targetPort":8080}],"selector":{"app":"default-http-backend"},"clusterIP":"10.0.0.194","type":"ClusterIP","sessionAffinity":"None"},"status":{"loadBalancer":{}}},"port":0,"secure":false,"secureCACert":{"secret":"","caFilename":"","pemSha":""},"sslPassthrough":false,"endpoints":[{"address":"10.1.254.206","port":"8080","maxFails":0,"failTimeout":0,"target":{"kind":"Pod","namespace":"kube-system","name":"default-http-backend-697dd7479d-hhrnt","uid":"3f2a7175-0611-11e8-b8d9-fa163ed2f375","resourceVersion":"1372"}}],"sessionAffinityConfig":{"name":"","cookieSessionAffinity":{"name":"","hash":""}}},{"name":"default-my-nginx-80","service":{"metadata":{"name":"my-nginx","namespace":"default","selfLink":"/api/v1/namespaces/default/services/my-nginx","uid":"ba506a71-0629-11e8-8e97-fa163ed2f375","resourceVersion":"6745","creationTimestamp":"2018-01-31T01:54:52Z","labels":{"run":"my-nginx"}},"spec":{"ports":[{"name":"nginx","protocol":"TCP","port":80,"targetPort":80,"nodePort":30122}],"selector":{"run":"my-nginx"},"clusterIP":"10.0.0.24","type":"NodePort","sessionAffinity":"None","externalTrafficPolicy":"Cluster"},"status":{"loadBalancer":{}}},"port":80,"secure":false,"secureCACert":{"secret":"","caFilename":"","pemSha":""},"sslPassthrough":true,"endpoints":[{"address":"10.1.85.70","port":"80","maxFails":0,"failTimeout":0,"target":{"kind":"Pod","namespace":"default","name":"my-nginx-7967bb46-6tk7s","uid":"ba68ab3b-0629-11e8-8e97-fa163ed2f375","resourceVersion":"6766"}}],"sessionAffinityConfig":{"name":"","cookieSessionAffinity":{"name":"","hash":""}}}],"PassthroughBackends":[{"service":{"metadata":{"name":"my-nginx","namespace":"default","selfLink":"/api/v1/namespaces/default/services/my-nginx","uid":"ba506a71-0629-11e8-8e97-fa163ed2f375","resourceVersion":"6745","creationTimestamp":"2018-01-31T01:54:52Z","labels":{"run":"my-nginx"}},"spec":{"ports":[{"name":"nginx","protocol":"TCP","port":80,"targetPort":80,"nodePort":30122}],"selector":{"run":"my-nginx"},"clusterIP":"10.0.0.24","type":"NodePort","sessionAffinity":"None","externalTrafficPolicy":"Cluster"},"status":{"loadBalancer":{}}},"port":80,"namespace":"default-my-nginx-80","hostname":"ubuhq1.eng.platformlab.ibm.com"}],"Servers":[{"hostname":"_","sslPassthrough":false,"sslCertificate":"/ingress-controller/ssl/default-fake-certificate.pem","sslFullChainCertificate":"","sslExpireTime":"0001-01-01T00:00:00Z","sslPemChecksum":"8d9bf9503a66fe659fd922c0cabcd7a5396222ee","locations":[{"path":"/","isDefBackend":true,"ingress":null,"backend":"upstream-default-backend","service":{"metadata":{"name":"default-http-backend","namespace":"kube-system","selfLink":"/api/v1/namespaces/kube-system/services/default-http-backend","uid":"3efa5901-0611-11e8-b8d9-fa163ed2f375","resourceVersion":"1244","creationTimestamp":"2018-01-30T22:59:37Z","annotations":{"kubectl.kubernetes.io/last-applied-configuration":"{\"apiVersion\":\"v1\",\"kind\":\"Service\",\"metadata\":{\"annotations\":{},\"name\":\"default-http-backend\",\"namespace\":\"kube-system\"},\"spec\":{\"ports\":[{\"port\":80,\"protocol\":\"TCP\",\"targetPort\":8080}],\"selector\":{\"app\":\"default-http-backend\"},\"type\":\"ClusterIP\"}}\n"}},"spec":{"ports":[{"protocol":"TCP","port":80,"targetPort":8080}],"selector":{"app":"default-http-backend"},"clusterIP":"10.0.0.194","type":"ClusterIP","sessionAffinity":"None"},"status":{"loadBalancer":{}}},"port":0,"upstream-vhost":"","basicDigestAuth":{"type":"","realm":"","file":"","secured":false,"fileSha":""},"corsConfig":{"corsEnabled":false,"corsAllowOrigin":"","corsAllowMethods":"","corsAllowHeaders":"","corsAllowCredentials":false},"externalAuth":{"url":"","host":"","signinUrl":"","method":"","responseHeaders":null},"rateLimit":{"connections":{"name":"","limit":0,"burst":0,"sharedSize":0},"rps":{"name":"","limit":0,"burst":0,"sharedSize":0},"rpm":{"name":"","limit":0,"burst":0,"sharedSize":0},"limit-rate":0,"limit-rate-after":0,"name":"","id":"","whitelist":null},"redirect":{"url":"","code":0,"fromToWWW":false},"rewrite":{"target":"","addBaseUrl":false,"baseUrlScheme":"","sslRedirect":false,"forceSSLRedirect":false,"appRoot":""},"whitelist":{"cidr":null},"proxy":{"bodySize":"1m","connectTimeout":5,"sendTimeout":60,"readTimeout":60,"bufferSize":"4k","cookieDomain":"off","cookiePath":"off","nextUpstream":"error timeout invalid_header http_502 http_503 http_504","passParams":"","proxyRedirectFrom":"off","proxyRedirectTo":"","requestBuffering":"on"},"usePortInRedirects":false,"configurationSnippet":"","connection":{"header":"","enabled":false}}],"certificateAuth":{"secret":"","caFilename":"","pemSha":"","verify_client":"","validationDepth":0,"errorPage":"","passCertToUpstream":false},"serverSnippet":""},{"hostname":"ubuhq1.eng.platformlab.ibm.com","sslPassthrough":true,"sslCertificate":"","sslFullChainCertificate":"","sslExpireTime":"0001-01-01T00:00:00Z","sslPemChecksum":"","locations":[{"path":"/","isDefBackend":false,"ingress":{"metadata":{"name":"my-nginx","namespace":"default","selfLink":"/apis/extensions/v1beta1/namespaces/default/ingresses/my-nginx","uid":"ca6724d6-062a-11e8-8e97-fa163ed2f375","resourceVersion":"8335","generation":1,"creationTimestamp":"2018-01-31T02:02:28Z","annotations":{"nginx.ingress.kubernetes.io/ssl-passthrough":"true"}},"spec":{"rules":[{"host":"ubuhq1.eng.platformlab.ibm.com","http":{"paths":[{"backend":{"serviceName":"my-nginx","servicePort":80}}]}}]},"status":{"loadBalancer":{}}},"backend":"default-my-nginx-80","service":{"metadata":{"name":"my-nginx","namespace":"default","selfLink":"/api/v1/namespaces/default/services/my-nginx","uid":"ba506a71-0629-11e8-8e97-fa163ed2f375","resourceVersion":"6745","creationTimestamp":"2018-01-31T01:54:52Z","labels":{"run":"my-nginx"}},"spec":{"ports":[{"name":"nginx","protocol":"TCP","port":80,"targetPort":80,"nodePort":30122}],"selector":{"run":"my-nginx"},"clusterIP":"10.0.0.24","type":"NodePort","sessionAffinity":"None","externalTrafficPolicy":"Cluster"},"status":{"loadBalancer":{}}},"port":80,"upstream-vhost":"","basicDigestAuth":{"type":"","realm":"","file":"","secured":false,"fileSha":""},"corsConfig":{"corsEnabled":false,"corsAllowOrigin":"*","corsAllowMethods":"GET, PUT, POST, DELETE, PATCH, OPTIONS","corsAllowHeaders":"DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization","corsAllowCredentials":true},"externalAuth":{"url":"","host":"","signinUrl":"","method":"","responseHeaders":null},"rateLimit":{"connections":{"name":"","limit":0,"burst":0,"sharedSize":0},"rps":{"name":"","limit":0,"burst":0,"sharedSize":0},"rpm":{"name":"","limit":0,"burst":0,"sharedSize":0},"limit-rate":0,"limit-rate-after":0,"name":"","id":"","whitelist":null},"redirect":{"url":"","code":0,"fromToWWW":false},"rewrite":{"target":"","addBaseUrl":false,"baseUrlScheme":"","sslRedirect":true,"forceSSLRedirect":false,"appRoot":""},"whitelist":{"cidr":null},"proxy":{"bodySize":"1m","connectTimeout":5,"sendTimeout":60,"readTimeout":60,"bufferSize":"4k","cookieDomain":"off","cookiePath":"off","nextUpstream":"error timeout invalid_header http_502 http_503 http_504","passParams":"","proxyRedirectFrom":"off","proxyRedirectTo":"","requestBuffering":"on"},"usePortInRedirects":false,"configurationSnippet":"","connection":{"header":"","enabled":false}}],"certificateAuth":{"secret":"","caFilename":"","pemSha":"","verify_client":"","validationDepth":0,"errorPage":"","passCertToUpstream":false},"serverSnippet":""}],"TCPBackends":[],"UDPBackends":[],"HealthzURI":"/healthz","CustomErrors":false,"Cfg":{"app-root":"","custom-http-errors":null,"proxy-body-size":"1m","proxy-connect-timeout":5,"proxy-read-timeout":60,"proxy-send-timeout":60,"proxy-buffer-size":"4k","proxy-cookie-path":"off","proxy-cookie-domain":"off","proxy-next-upstream":"error timeout invalid_header http_502 http_503 http_504","proxy-pass-params":"","proxy-redirect-from":"off","proxy-redirect-to":"","proxy-request-buffering":"on","Resolver":["9.21.48.113","9.21.48.114","9.111.248.111"],"skip-access-log-urls":[],"ssl-redirect":true,"force-ssl-redirect":false,"use-port-in-redirects":false,"upstream-max-fails":0,"upstream-fail-timeout":0,"upstream-hash-by":"","whitelist-source-range":[],"limit-rate":0,"limit-rate-after":0,"allow-backend-server-header":false,"access-log-path":"/var/log/nginx/access.log","error-log-path":"/var/log/nginx/error.log","enable-dynamic-tls-records":true,"enable-modsecurity":false,"enable-owasp-modsecurity-crs":false,"client-header-buffer-size":"1k","client-header-timeout":60,"client-body-buffer-size":"8k","client-body-timeout":60,"disable-access-log":true,"enable-underscores-in-headers":false,"ignore-invalid-headers":true,"vts-status-zone-size":"10m","vts-default-filter-key":"$geoip_country_code country::*","retry-non-idempotent":false,"error-log-level":"notice","http2-max-field-size":"4k","http2-max-header-size":"16k","hsts":true,"hsts-include-subdomains":true,"hsts-max-age":"15724800","keep-alive":75,"keep-alive-requests":100,"large-client-header-buffers":"4 8k","log-format-upstream":"%v - [$the_real_ip] - $remote_user [$time_local] \"$request\" $status $body_bytes_sent \"$http_referer\" \"$http_user_agent\" $request_length $request_time [$proxy_upstream_name] $upstream_addr $upstream_response_length $upstream_response_time $upstream_status","log-format-stream":"[$time_local] $protocol $status $bytes_sent $bytes_received $session_time","max-worker-connections":16384,"map-hash-bucket-size":64,"proxy-real-ip-cidr":["0.0.0.0/0"],"server-name-hash-max-size":1024,"server-name-hash-bucket-size":64,"proxy-headers-hash-max-size":512,"proxy-headers-hash-bucket-size":64,"server-tokens":true,"ssl-ciphers":"ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256","ssl-ecdh-curve":"auto","ssl-protocols":"TLSv1.2","ssl-session-cache":true,"ssl-session-cache-size":"10m","ssl-session-tickets":true,"ssl-session-timeout":"10m","ssl-buffer-size":"4k","use-gzip":true,"enable-brotli":true,"brotli-level":4,"brotli-types":"application/xml+rss application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/plain text/x-component","use-http2":true,"gzip-types":"application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/plain text/x-component","worker-processes":"8","worker-shutdown-timeout":"10s","load-balance":"least_conn","variables-hash-bucket-size":128,"variables-hash-max-size":2048,"upstream-keepalive-connections":32,"limit-conn-zone-variable":"$binary_remote_addr","proxy-stream-timeout":"600s","proxy-stream-responses":1,"forwarded-for-header":"X-Forwarded-For","enable-opentracing":false,"zipkin-collector-host":"","zipkin-collector-port":9411,"zipkin-service-name":"nginx","http-snippet":"","server-snippet":"","location-snippet":"","http-redirect-code":308},"IsIPV6Enabled":true,"IsSSLPassthroughEnabled":true,"RedirectServers":{},"ListenPorts":{"HTTP":80,"HTTPS":443,"Status":18080,"Health":10254,"Default":8181,"SSLProxy":442},"PublishService":null}
+I0131 02:14:11.725287       7 nginx.go:669] NGINX configuration diff
+I0131 02:14:11.725317       7 nginx.go:670] --- /etc/nginx/nginx.conf	2018-01-30 09:12:14.000000000 +0000
++++ /tmp/new-nginx-cfg734715498	2018-01-31 02:14:11.722003470 +0000
+@@ -1,6 +1,420 @@
+-# A very simple nginx configuration file that forces nginx to start.
++
++daemon off;
++
++worker_processes 8;
+ pid /run/nginx.pid;
+ 
+-events {}
+-http {}
+-daemon off;
+\ No newline at end of file
++worker_rlimit_nofile 130048;
++
++worker_shutdown_timeout 10s ;
++
++events {
++    multi_accept        on;
++    worker_connections  16384;
++    use                 epoll;
++}
++
++http {
++
++    real_ip_header      X-Forwarded-For;
++
++    real_ip_recursive   on;
++
++    set_real_ip_from    0.0.0.0/0;
++
++    geoip_country       /etc/nginx/GeoIP.dat;
++    geoip_city          /etc/nginx/GeoLiteCity.dat;
++    geoip_proxy_recursive on;
++
++    sendfile            on;
++
++    aio                 threads;
++    aio_write           on;
++
++    tcp_nopush          on;
++    tcp_nodelay         on;
++
++    log_subrequest      on;
++
++    reset_timedout_connection on;
++
++    keepalive_timeout  75s;
++    keepalive_requests 100;
++
++    client_header_buffer_size       1k;
++    client_header_timeout           60s;
++    large_client_header_buffers     4 8k;
++    client_body_buffer_size         8k;
++    client_body_timeout             60s;
++
++    http2_max_field_size            4k;
++    http2_max_header_size           16k;
++
++    types_hash_max_size             2048;
++    server_names_hash_max_size      1024;
++    server_names_hash_bucket_size   64;
++    map_hash_bucket_size            64;
++
++    proxy_headers_hash_max_size     512;
++    proxy_headers_hash_bucket_size  64;
++
++    variables_hash_bucket_size      128;
++    variables_hash_max_size         2048;
++
++    underscores_in_headers          off;
++    ignore_invalid_headers          on;
++
++    include /etc/nginx/mime.types;
++    default_type text/html;
++
++    brotli on;
++    brotli_comp_level 4;
++    brotli_types application/xml+rss application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/plain text/x-component;
++
++    gzip on;
++    gzip_comp_level 5;
++    gzip_http_version 1.1;
++    gzip_min_length 256;
++    gzip_types application/atom+xml application/javascript application/x-javascript application/json application/rss+xml application/vnd.ms-fontobject application/x-font-ttf application/x-web-app-manifest+json application/xhtml+xml application/xml font/opentype image/svg+xml image/x-icon text/css text/plain text/x-component;
++    gzip_proxied any;
++    gzip_vary on;
++
++    # Custom headers for response
++
++    server_tokens on;
++
++    # disable warnings
++    uninitialized_variable_warn off;
++
++    # Additional available variables:
++    # $namespace
++    # $ingress_name
++    # $service_name
++    log_format upstreaminfo '$the_real_ip - [$the_real_ip] - $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent" $request_length $request_time [$proxy_upstream_name] $upstream_addr $upstream_response_length $upstream_response_time $upstream_status';
++
++    map $request_uri $loggable {
++
++        default 1;
++    }
++
++    access_log off;
++
++    error_log  /var/log/nginx/error.log notice;
++
++    resolver 9.21.48.113 9.21.48.114 9.111.248.111 valid=30s;
++
++    # Retain the default nginx handling of requests without a "Connection" header
++    map $http_upgrade $connection_upgrade {
++        default          upgrade;
++        ''               close;
++    }
++
++    map $http_x_forwarded_for $the_real_ip {
++
++        default          $remote_addr;
++
++    }
++
++    # trust http_x_forwarded_proto headers correctly indicate ssl offloading
++    map $http_x_forwarded_proto $pass_access_scheme {
++        default          $http_x_forwarded_proto;
++        ''               $scheme;
++    }
++
++    map $http_x_forwarded_port $pass_server_port {
++        default           $http_x_forwarded_port;
++        ''                $server_port;
++    }
++
++    map $http_x_forwarded_host $best_http_host {
++        default          $http_x_forwarded_host;
++        ''               $this_host;
++    }
++
++    # map port 442 to 443 for header X-Forwarded-Port
++    map $pass_server_port $pass_port {
++        442              443;
++        default          $pass_server_port;
++    }
++
++    # Obtain best http host
++    map $http_host $this_host {
++        default          $http_host;
++        ''               $host;
++    }
++
++    server_name_in_redirect off;
++    port_in_redirect        off;
++
++    ssl_protocols TLSv1.2;
++
++    # turn on session caching to drastically improve performance
++
++    ssl_session_cache builtin:1000 shared:SSL:10m;
++    ssl_session_timeout 10m;
++
++    # allow configuring ssl session tickets
++    ssl_session_tickets on;
++
++    # slightly reduce the time-to-first-byte
++    ssl_buffer_size 4k;
++
++    # allow configuring custom ssl ciphers
++    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
++    ssl_prefer_server_ciphers on;
++
++    ssl_ecdh_curve auto;
++
++    proxy_ssl_session_reuse on;
++
++    upstream upstream-default-backend {
++        # Load balance algorithm; empty for round robin, which is the default
++
++        least_conn;
++
++        keepalive 32;
++
++        server 10.1.254.206:8080 max_fails=0 fail_timeout=0;
++
++    }
++
++    upstream default-my-nginx-80 {
++        # Load balance algorithm; empty for round robin, which is the default
++
++        least_conn;
++
++        keepalive 32;
++
++        server 10.1.85.70:80 max_fails=0 fail_timeout=0;
++
++    }
++
++    ## start server _
++    server {
++        server_name _ ;
++
++        listen 80 default_server reuseport backlog=32768;
++
++        listen [::]:80 default_server reuseport backlog=32768;
++
++        set $proxy_upstream_name "-";
++
++        listen 442 proxy_protocol   default_server reuseport backlog=32768 ssl http2;
++
++        listen [::]:442 proxy_protocol  default_server reuseport backlog=32768 ssl http2;
++
++        # PEM sha: 8d9bf9503a66fe659fd922c0cabcd7a5396222ee
++        ssl_certificate                         /ingress-controller/ssl/default-fake-certificate.pem;
++        ssl_certificate_key                     /ingress-controller/ssl/default-fake-certificate.pem;
++
++        more_set_headers                        "Strict-Transport-Security: max-age=15724800; includeSubDomains;";
++
++        location / {
++            port_in_redirect off;
++
++            set $proxy_upstream_name "upstream-default-backend";
++
++            set $namespace      "";
++            set $ingress_name   "";
++            set $service_name   "";
++
++            client_max_body_size                    "1m";
++
++            proxy_set_header Host                   $best_http_host;
++
++            # Pass the extracted client certificate to the backend
++
++            proxy_set_header ssl-client-cert        "";
++            proxy_set_header ssl-client-verify      "";
++            proxy_set_header ssl-client-dn          "";
++
++            # Allow websocket connections
++            proxy_set_header                        Upgrade           $http_upgrade;
++
++            proxy_set_header                        Connection        $connection_upgrade;
++
++            proxy_set_header X-Real-IP              $the_real_ip;
++
++            proxy_set_header X-Forwarded-For        $the_real_ip;
++
++            proxy_set_header X-Forwarded-Host       $best_http_host;
++            proxy_set_header X-Forwarded-Port       $pass_port;
++            proxy_set_header X-Forwarded-Proto      $pass_access_scheme;
++            proxy_set_header X-Original-URI         $request_uri;
++            proxy_set_header X-Scheme               $pass_access_scheme;
++
++            # Pass the original X-Forwarded-For
++            proxy_set_header X-Original-Forwarded-For $http_x_forwarded_for;
++
++            # mitigate HTTPoxy Vulnerability
++            # https://www.nginx.com/blog/mitigating-the-httpoxy-vulnerability-with-nginx/
++            proxy_set_header Proxy                  "";
++
++            # Custom headers to proxied server
++
++            proxy_connect_timeout                   5s;
++            proxy_send_timeout                      60s;
++            proxy_read_timeout                      60s;
++
++            proxy_redirect                          off;
++
++            proxy_buffering                         off;
++            proxy_buffer_size                       "4k";
++            proxy_buffers                           4 "4k";
++            proxy_request_buffering                 "on";
++
++            proxy_http_version                      1.1;
++
++            proxy_cookie_domain                     off;
++            proxy_cookie_path                       off;
++
++            # In case of errors try the next upstream server before returning an error
++            proxy_next_upstream                     error timeout invalid_header http_502 http_503 http_504;
++
++            proxy_pass http://upstream-default-backend;
++
++        }
++
++        # health checks in cloud providers require the use of port 80
++        location /healthz {
++            access_log off;
++            return 200;
++        }
++
++        # this is required to avoid error if nginx is being monitored
++        # with an external software (like sysdig)
++        location /nginx_status {
++            allow 127.0.0.1;
++            allow ::1;
++            deny all;
++
++            access_log off;
++            stub_status on;
++        }
++
++    }
++    ## end server _
++
++    ## start server ubuhq1.eng.platformlab.ibm.com
++    server {
++        server_name ubuhq1.eng.platformlab.ibm.com ;
++
++        listen 80;
++
++        listen [::]:80;
++
++        set $proxy_upstream_name "-";
++
++        location / {
++            port_in_redirect off;
++
++            set $proxy_upstream_name "default-my-nginx-80";
++
++            set $namespace      "default";
++            set $ingress_name   "my-nginx";
++            set $service_name   "";
++
++            client_max_body_size                    "1m";
++
++            proxy_set_header Host                   $best_http_host;
++
++            # Pass the extracted client certificate to the backend
++
++            proxy_set_header ssl-client-cert        "";
++            proxy_set_header ssl-client-verify      "";
++            proxy_set_header ssl-client-dn          "";
++
++            # Allow websocket connections
++            proxy_set_header                        Upgrade           $http_upgrade;
++
++            proxy_set_header                        Connection        $connection_upgrade;
++
++            proxy_set_header X-Real-IP              $the_real_ip;
++
++            proxy_set_header X-Forwarded-For        $the_real_ip;
++
++            proxy_set_header X-Forwarded-Host       $best_http_host;
++            proxy_set_header X-Forwarded-Port       $pass_port;
++            proxy_set_header X-Forwarded-Proto      $pass_access_scheme;
++            proxy_set_header X-Original-URI         $request_uri;
++            proxy_set_header X-Scheme               $pass_access_scheme;
++
++            # Pass the original X-Forwarded-For
++            proxy_set_header X-Original-Forwarded-For $http_x_forwarded_for;
++
++            # mitigate HTTPoxy Vulnerability
++            # https://www.nginx.com/blog/mitigating-the-httpoxy-vulnerability-with-nginx/
++            proxy_set_header Proxy                  "";
++
++            # Custom headers to proxied server
++
++            proxy_connect_timeout                   5s;
++            proxy_send_timeout                      60s;
++            proxy_read_timeout                      60s;
++
++            proxy_redirect                          off;
++
++            proxy_buffering                         off;
++            proxy_buffer_size                       "4k";
++            proxy_buffers                           4 "4k";
++            proxy_request_buffering                 "on";
++
++            proxy_http_version                      1.1;
++
++            proxy_cookie_domain                     off;
++            proxy_cookie_path                       off;
++
++            # In case of errors try the next upstream server before returning an error
++            proxy_next_upstream                     error timeout invalid_header http_502 http_503 http_504;
++
++            proxy_pass https://default-my-nginx-80;
++
++        }
++
++    }
++    ## end server ubuhq1.eng.platformlab.ibm.com
++
++    # default server, used for NGINX healthcheck and access to nginx stats
++    server {
++        # Use the port 18080 (random value just to avoid known ports) as default port for nginx.
++        # Changing this value requires a change in:
++        # https://github.com/kubernetes/ingress-nginx/blob/master/controllers/nginx/pkg/cmd/controller/nginx.go
++        listen 18080 default_server reuseport backlog=32768;
++        listen [::]:18080 default_server reuseport backlog=32768;
++        set $proxy_upstream_name "-";
++
++        location /healthz {
++            access_log off;
++            return 200;
++        }
++
++        location /nginx_status {
++            set $proxy_upstream_name "internal";
++
++            access_log off;
++            stub_status on;
++
++        }
++
++        location / {
++
++            set $proxy_upstream_name "upstream-default-backend";
++            proxy_pass          http://upstream-default-backend;
++        }
++
++    }
++}
++
++stream {
++    log_format log_stream [$time_local] $protocol $status $bytes_sent $bytes_received $session_time;
++
++    access_log off;
++
++    error_log  /var/log/nginx/error.log;
++
++    # TCP services
++
++    # UDP services
++
++}
++
+
+I0131 02:14:11.747042       7 status.go:196] new leader elected: nginx-ingress-lb-amd64-4ncx2
+I0131 02:14:11.836071       7 controller.go:220] ingress backend successfully reloaded...
+I0131 02:14:11.836115       7 queue.go:105] skipping kube-system/monitoring-prometheus-nodeexporter sync (1517364851645506293 > 1517364851553048456)
+I0131 02:14:11.836124       7 queue.go:105] skipping kube-system/platform-identity-provider sync (1517364851645506293 > 1517364851553336536)
+I0131 02:14:11.836129       7 queue.go:105] skipping kube-system/platform-ui sync (1517364851645506293 > 1517364851553689069)
+I0131 02:14:11.836133       7 queue.go:105] skipping kube-system/platform-identity-management sync (1517364851645506293 > 1517364851553764270)
+I0131 02:14:11.836138       7 queue.go:105] skipping kube-system/default-http-backend sync (1517364851645506293 > 1517364851553804936)
+I0131 02:14:11.836142       7 queue.go:105] skipping default/my-nginx sync (1517364851645506293 > 1517364851553732072)
+I0131 02:14:11.836146       7 queue.go:105] skipping kube-system/helm-api sync (1517364851645506293 > 1517364851553849305)
+I0131 02:14:11.836156       7 queue.go:105] skipping kube-system/image-manager sync (1517364851645506293 > 1517364851553896144)
+I0131 02:14:11.836160       7 queue.go:105] skipping kube-system/monitoring-exporter sync (1517364851645506293 > 1517364851553963193)
+I0131 02:14:11.836164       7 queue.go:105] skipping kube-system/unified-router sync (1517364851645506293 > 1517364851554017502)
+I0131 02:14:11.836169       7 queue.go:105] skipping kube-system/elasticsearch-data sync (1517364851645506293 > 1517364851554072452)
+I0131 02:14:11.836173       7 queue.go:105] skipping kube-system/heapster sync (1517364851645506293 > 1517364851554135411)
+I0131 02:14:11.836178       7 queue.go:105] skipping kube-system/helmrepo sync (1517364851645506293 > 1517364851554197900)
+I0131 02:14:11.836181       7 queue.go:105] skipping kube-system/iam-pdp sync (1517364851645506293 > 1517364851554251204)
+I0131 02:14:11.836187       7 queue.go:105] skipping default/kubernetes sync (1517364851645506293 > 1517364851554308076)
+I0131 02:14:11.836190       7 queue.go:105] skipping kube-system/kube-dns sync (1517364851645506293 > 1517364851554364369)
+I0131 02:14:11.836194       7 queue.go:105] skipping kube-system/monitoring-grafana sync (1517364851645506293 > 1517364851554415070)
+I0131 02:14:11.836199       7 queue.go:105] skipping kube-system/tiller-deploy sync (1517364851645506293 > 1517364851554459033)
+I0131 02:14:11.836203       7 queue.go:105] skipping kube-system/ds-hs sync (1517364851645506293 > 1517364851554512251)
+I0131 02:14:11.836207       7 queue.go:105] skipping kube-system/logstash sync (1517364851645506293 > 1517364851554571204)
+I0131 02:14:11.836214       7 queue.go:105] skipping kube-system/metering-server sync (1517364851645506293 > 1517364851554623170)
+I0131 02:14:11.836218       7 queue.go:105] skipping kube-system/monitoring-prometheus-alertmanager sync (1517364851645506293 > 1517364851554666622)
+I0131 02:14:11.836221       7 queue.go:105] skipping kube-system/monitoring-prometheus-kubestatemetrics sync (1517364851645506293 > 1517364851554723811)
+I0131 02:14:11.836225       7 queue.go:105] skipping kube-system/elasticsearch sync (1517364851645506293 > 1517364851554775247)
+I0131 02:14:11.836229       7 queue.go:105] skipping kube-system/elasticsearch-discovery sync (1517364851645506293 > 1517364851554832188)
+I0131 02:14:11.836234       7 queue.go:105] skipping kube-system/kube-scheduler sync (1517364851645506293 > 1517364851554883084)
+I0131 02:14:11.836238       7 queue.go:105] skipping kube-system/metering-ui sync (1517364851645506293 > 1517364851554929989)
+I0131 02:14:11.836241       7 queue.go:105] skipping kube-system/platform-auth-service sync (1517364851645506293 > 1517364851554986511)
+I0131 02:14:11.836246       7 queue.go:105] skipping kube-system/catalog-ui sync (1517364851645506293 > 1517364851555039089)
+I0131 02:14:11.836252       7 queue.go:105] skipping kube-system/cloudantdb sync (1517364851645506293 > 1517364851555094221)
+I0131 02:14:11.836256       7 queue.go:105] skipping kube-system/iam-pap sync (1517364851645506293 > 1517364851555147982)
+I0131 02:14:11.836269       7 queue.go:105] skipping kube-system/metering-dm sync (1517364851645506293 > 1517364851555202159)
+I0131 02:14:11.836274       7 queue.go:105] skipping kube-system/catalog-catalog-apiserver sync (1517364851645506293 > 1517364851555252747)
+I0131 02:14:11.836279       7 queue.go:105] skipping kube-system/kube-controller-manager sync (1517364851645506293 > 1517364851555317561)
+I0131 02:14:11.836284       7 queue.go:105] skipping kube-system/monitoring-prometheus sync (1517364851645506293 > 1517364851555359262)
+I0131 02:14:11.836289       7 queue.go:105] skipping default/my-nginx sync (1517364851645506293 > 1517364851555411505)
+I0131 02:14:11.836294       7 queue.go:105] skipping  sync (1517364851645506293 > 1517364851561175022)
+I0131 02:14:11.836297       7 queue.go:105] skipping  sync (1517364851645506293 > 1517364851645441493)
+I0131 02:14:41.645393       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:14:42.571143       7 leaderelection.go:184] successfully acquired lease kube-system/ingress-controller-leader-nginx
+I0131 02:14:42.571181       7 status.go:196] new leader elected: nginx-ingress-lb-amd64-m464t
+I0131 02:14:42.571191       7 status.go:190] I am the new status update leader
+I0131 02:15:11.645254       7 queue.go:70] queuing item sync status
+I0131 02:15:11.645289       7 queue.go:111] syncing sync status
+I0131 02:15:11.645856       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:15:11.651288       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:15:11.652815       7 status.go:352] updating Ingress default/my-nginx status to [{ }]
+I0131 02:15:11.654548       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:15:11.654560       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:15:11.654579       7 controller.go:1222] updating annotations information for ingress default/my-nginx
+I0131 02:15:11.654596       7 main.go:109] No default affinity was found for Ingress my-nginx
+I0131 02:15:11.654689       7 queue.go:70] queuing item &Ingress{ObjectMeta:k8s_io_apimachinery_pkg_apis_meta_v1.ObjectMeta{Name:my-nginx,GenerateName:,Namespace:default,SelfLink:/apis/extensions/v1beta1/namespaces/default/ingresses/my-nginx,UID:ca6724d6-062a-11e8-8e97-fa163ed2f375,ResourceVersion:8501,Generation:1,CreationTimestamp:2018-01-31 02:02:28 +0000 UTC,DeletionTimestamp:<nil>,DeletionGracePeriodSeconds:nil,Labels:map[string]string{},Annotations:map[string]string{nginx.ingress.kubernetes.io/ssl-passthrough: true,},OwnerReferences:[],Finalizers:[],ClusterName:,Initializers:nil,},Spec:IngressSpec{Backend:nil,TLS:[],Rules:[{ubuhq1.eng.platformlab.ibm.com {HTTPIngressRuleValue{Paths:[{ {my-nginx {0 80 }}}],}}}],},Status:IngressStatus{LoadBalancer:k8s_io_api_core_v1.LoadBalancerStatus{Ingress:[{ }],},},}
+I0131 02:15:11.654779       7 queue.go:111] syncing default/my-nginx
+I0131 02:15:11.654790       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:15:11.654802       7 controller.go:1139] getting endpoints for service kube-system/default-http-backend and port &ServicePort{Name:,Protocol:TCP,Port:80,TargetPort:8080,NodePort:0,}
+I0131 02:15:11.654815       7 controller.go:1185] endpoints found: [{10.1.254.206 8080 0 0 &ObjectReference{Kind:Pod,Namespace:kube-system,Name:default-http-backend-697dd7479d-hhrnt,UID:3f2a7175-0611-11e8-b8d9-fa163ed2f375,APIVersion:,ResourceVersion:1372,FieldPath:,}}]
+I0131 02:15:11.654830       7 controller.go:708] creating upstream default-my-nginx-80
+I0131 02:15:11.654839       7 controller.go:806] obtaining port information for service default/my-nginx
+I0131 02:15:11.654846       7 controller.go:1139] getting endpoints for service default/my-nginx and port &ServicePort{Name:nginx,Protocol:TCP,Port:80,TargetPort:80,NodePort:30122,}
+I0131 02:15:11.654855       7 controller.go:1185] endpoints found: [{10.1.85.70 80 0 0 &ObjectReference{Kind:Pod,Namespace:default,Name:my-nginx-7967bb46-6tk7s,UID:ba68ab3b-0629-11e8-8e97-fa163ed2f375,APIVersion:,ResourceVersion:6766,FieldPath:,}}]
+I0131 02:15:11.654886       7 controller.go:1030] ingress default/my-nginx for host ubuhq1.eng.platformlab.ibm.com does not contains a TLS section
+I0131 02:15:11.654894       7 controller.go:425] secret  does not contain 'ca.crt', mutual authentication not enabled - ingress rule default/my-nginx.
+I0131 02:15:11.654898       7 controller.go:456] replacing ingress rule default/my-nginx location / upstream default-my-nginx-80 (upstream-default-backend)
+I0131 02:15:11.654907       7 controller.go:231] obtaining information about stream services of type TCP located in configmap 
+I0131 02:15:11.654912       7 controller.go:231] obtaining information about stream services of type UDP located in configmap 
+I0131 02:15:11.654923       7 controller.go:207] skipping backend reload (no changes detected)
+I0131 02:15:11.655083       7 event.go:218] Event(v1.ObjectReference{Kind:"Ingress", Namespace:"default", Name:"my-nginx", UID:"ca6724d6-062a-11e8-8e97-fa163ed2f375", APIVersion:"extensions", ResourceVersion:"8501", FieldPath:""}): type: 'Normal' reason: 'UPDATE' Ingress default/my-nginx
+I0131 02:15:41.646028       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:16:11.645381       7 queue.go:70] queuing item sync status
+I0131 02:16:11.645414       7 queue.go:111] syncing sync status
+I0131 02:16:11.646100       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:16:11.651898       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:16:11.651972       7 status.go:341] skipping update of Ingress default/my-nginx (no change)
+I0131 02:16:41.646252       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:17:11.645508       7 queue.go:70] queuing item sync status
+I0131 02:17:11.645542       7 queue.go:111] syncing sync status
+I0131 02:17:11.646408       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:17:11.651231       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:17:11.651268       7 status.go:341] skipping update of Ingress default/my-nginx (no change)
+I0131 02:17:41.646532       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:18:11.645634       7 queue.go:70] queuing item sync status
+I0131 02:18:11.645672       7 queue.go:111] syncing sync status
+I0131 02:18:11.646676       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:18:11.729818       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:18:11.729925       7 status.go:341] skipping update of Ingress default/my-nginx (no change)
+I0131 02:18:18.705307       7 main.go:205] remote address 9.111.255.72:34982 to local 9.111.255.72:443
+I0131 02:18:41.646857       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:19:11.645762       7 queue.go:70] queuing item sync status
+I0131 02:19:11.645795       7 queue.go:111] syncing sync status
+I0131 02:19:11.647011       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:19:11.651863       7 main.go:47] annotation kubernetes.io/ingress.class is not present in ingress default/my-nginx
+I0131 02:19:11.651942       7 status.go:341] skipping update of Ingress default/my-nginx (no change)
+I0131 02:19:32.229313       7 main.go:205] remote address 9.111.255.72:35580 to local 9.111.255.72:443

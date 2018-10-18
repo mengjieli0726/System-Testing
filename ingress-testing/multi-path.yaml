@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-nginx2
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: poc.ibm.icp.info
+    http:
+      paths:
+      - path: /s1
+        backend:
+          serviceName: my-nginx
+          servicePort: 80
+      - path: /s2
+        backend:
+          serviceName: my-nginx
+          servicePort: 80

@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ssl
+  namespace: kube-system
+  annotations:
+    #nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+#    ingress.kubernetes.io/ssl-passthrough: "true"
+spec:
+  rules:
+  - host: ubuhq1.eng.platformlab.ibm.com
+    http:
+      paths:
+      - backend:
+          serviceName: platform-identity-provider
+          servicePort: 9443
+  tls:
+  - hosts:
+    - ubuhq1.eng.platformlab.ibm.com

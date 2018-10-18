@@ -1,0 +1,120 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"extensions/v1beta1","kind":"DaemonSet","metadata":{"annotations":{},"name":"nginx-ingress-lb-amd64","namespace":"kube-system"},"spec":{"minReadySeconds":0,"template":{"metadata":{"labels":{"arch":"amd64","name":"nginx-ingress-lb"}},"spec":{"containers":[{"args":["/nginx-ingress-controller","--default-backend-service=$(POD_NAMESPACE)/default-http-backend","--configmap=$(POD_NAMESPACE)/nginx-load-balancer-conf"],"env":[{"name":"POD_NAME","valueFrom":{"fieldRef":{"fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"image":"registry.ng.bluemix.net/mdelder/nginx-ingress-controller:0.9.0-beta.13","imagePullPolicy":"IfNotPresent","livenessProbe":{"httpGet":{"path":"/healthz","port":10254,"scheme":"HTTP"},"initialDelaySeconds":10,"timeoutSeconds":1},"name":"nginx-ingress-lb-amd64","ports":[{"containerPort":80},{"containerPort":443}],"readinessProbe":{"httpGet":{"path":"/healthz","port":10254,"scheme":"HTTP"}}}],"hostNetwork":true,"initContainers":[{"command":["sh","-c","sysctl -w net.core.somaxconn=32768; sysctl -w net.ipv4.ip_local_port_range=\"1024 65535\""],"image":"registry.ng.bluemix.net/mdelder/icp-initcontainer:1.0.0","imagePullPolicy":"IfNotPresent","name":"sysctl","securityContext":{"privileged":true}}],"nodeSelector":{"beta.kubernetes.io/arch":"amd64","proxy":"true"},"terminationGracePeriodSeconds":60,"tolerations":[{"effect":"NoSchedule","key":"dedicated","operator":"Exists"},{"key":"CriticalAddonsOnly","operator":"Exists"}]}},"updateStrategy":{"rollingUpdate":{"maxUnavailable":1},"type":"RollingUpdate"}}}
+  creationTimestamp: 2018-01-30T22:59:37Z
+  generation: 6
+  labels:
+    arch: amd64
+    name: nginx-ingress-lb
+  name: nginx-ingress-lb-amd64
+  namespace: kube-system
+  resourceVersion: "9043"
+  selfLink: /apis/extensions/v1beta1/namespaces/kube-system/daemonsets/nginx-ingress-lb-amd64
+  uid: 3eda06ec-0611-11e8-b8d9-fa163ed2f375
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      arch: amd64
+      name: nginx-ingress-lb
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        arch: amd64
+        name: nginx-ingress-lb
+    spec:
+      containers:
+      - args:
+        - /nginx-ingress-controller
+        - --default-backend-service=$(POD_NAMESPACE)/default-http-backend
+        - --configmap=$(POD_NAMESPACE)/nginx-load-balancer-conf
+        - --enable-ssl-passthrough
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        image: registry.ng.bluemix.net/mdelder/nginx-ingress-controller:0.9.0
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /healthz
+            port: 10254
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: nginx-ingress-lb-amd64
+        ports:
+        - containerPort: 80
+          hostPort: 80
+          protocol: TCP
+        - containerPort: 443
+          hostPort: 443
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /healthz
+            port: 10254
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      hostNetwork: true
+      initContainers:
+      - command:
+        - sh
+        - -c
+        - sysctl -w net.core.somaxconn=32768; sysctl -w net.ipv4.ip_local_port_range="1024
+          65535"
+        image: registry.ng.bluemix.net/mdelder/icp-initcontainer:1.0.0
+        imagePullPolicy: IfNotPresent
+        name: sysctl
+        resources: {}
+        securityContext:
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      nodeSelector:
+        beta.kubernetes.io/arch: amd64
+        proxy: "true"
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 60
+      tolerations:
+      - effect: NoSchedule
+        key: dedicated
+        operator: Exists
+      - key: CriticalAddonsOnly
+        operator: Exists
+  templateGeneration: 6
+  updateStrategy:
+    rollingUpdate:
+      maxUnavailable: 1
+    type: RollingUpdate
+status:
+  currentNumberScheduled: 1
+  desiredNumberScheduled: 1
+  numberAvailable: 1
+  numberMisscheduled: 0
+  numberReady: 1
+  observedGeneration: 6
+  updatedNumberScheduled: 1

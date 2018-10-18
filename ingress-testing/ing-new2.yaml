@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-nginx2
+  annotations:
+    nginx.ingress.kubernetes.io/connection-proxy-header: '""'
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: ubuhq1.eng.platformlab.ibm.com
+    http:
+      paths:
+      - backend:
+          serviceName: my-nginx
+          servicePort: 80
+        path: /s2
